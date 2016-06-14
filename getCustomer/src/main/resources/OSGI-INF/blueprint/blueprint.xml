@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- JBoss, Home of Professional Open Source Copyright 2014, Red Hat, Inc. 
+	and/or its affiliates, and individual contributors by the @authors tag. See 
+	the copyright.txt in the distribution for a full listing of individual contributors. 
+	Licensed under the Apache License, Version 2.0 (the "License"); you may not 
+	use this file except in compliance with the License. You may obtain a copy 
+	of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required 
+	by applicable law or agreed to in writing, software distributed under the 
+	License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
+	OF ANY KIND, either express or implied. See the License for the specific 
+	language governing permissions and limitations under the License. -->
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cxf="http://camel.apache.org/schema/blueprint/cxf"
+	xmlns:http-conf="http://cxf.apache.org/transports/http/configuration"
+	xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.0.0"
+	xsi:schemaLocation="
+             http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+             http://camel.apache.org/schema/blueprint/cxf http://camel.apache.org/schema/blueprint/cxf/camel-cxf.xsd
+             http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
+
+
+	<cm:property-placeholder persistent-id="environment"
+		id="env.placeholder">
+		<cm:default-properties>
+			<cm:property name="fuse.getcustomer.in" value="http://localhost:8060/getCustomer" />
+			<cm:property name="fuse.getcustomer.out" value="http://localhost:8068/mocktarget" />
+			<cm:property name="xslt_in" value="xsl/customerTransfoIn.xsl" />
+			<cm:property name="xslt_out" value="xsl/customerTransfoOut.xsl" />
+		</cm:default-properties>
+	</cm:property-placeholder>
+
+	<http-conf:conduit id="http-conduit" name="*.http-conduit">
+		<http-conf:client ReceiveTimeout="15000"
+			ConnectionTimeout="500" />
+	</http-conf:conduit>
+
+
+	<bean id="gZipOutInterceptor" class="org.apache.cxf.transport.common.gzip.GZIPOutInterceptor" />
+	<bean id="gZipInInterceptor" class="org.apache.cxf.transport.common.gzip.GZIPInInterceptor" />
+	<cxf:cxfEndpoint id="Fuse_getCustomerEndpoint" address="{{fuse.getcustomer.in}}"
+		wsdlURL="wsdl/getCustomer_interface.wsdl" endpointName="s:integration.binding.Customer.BindingQSPort"
+		serviceName="s:integration.svc.Customer.BindingQSService" xmlns:s="urn:org.redhat.integration.cd.customer">
+		<cxf:properties>
+			<entry key="dataFormat" value="PAYLOAD" />
+			<entry key="schema-validation-enabled" value="true" />
+		</cxf:properties>
+	</cxf:cxfEndpoint>
+
+	<cxf:cxfEndpoint id="customerServiceEndpoint" address="{{fuse.getcustomer.out}}"
+		wsdlURL="wsdl/targetService.wsdl" endpointName="s:CustomerServicesSoap"
+		serviceName="s:CustomerServices" xmlns:s="http://backendSystem/target/">
+		<cxf:properties>
+			<entry key="dataFormat" value="PAYLOAD" />
+			<entry key="schema-validation-enabled" value="false" />
+		</cxf:properties>
+		<cxf:outInterceptors>
+			<ref component-id="gZipOutInterceptor" />
+		</cxf:outInterceptors>
+		<cxf:inInterceptors>
+			<ref component-id="gZipInInterceptor" />
+		</cxf:inInterceptors>
+	</cxf:cxfEndpoint>
+
+
+	<camelContext xmlns="http://camel.apache.org/schema/blueprint"
+		xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sp="http://www.w3.org/2003/05/soap-envelope"
+		xmlns:in="urn:org.redhat.integration.cd.customer">
+
+
+		<route id="main" streamCache="true">
+			<from uri="cxf:bean:Fuse_getCustomerEndpoint" />
+
+
+			<log message="Processing message ${exchangeId}" loggingLevel="INFO" />
+
+			<log message="Request header received : ${in.headers}"
+				loggingLevel="DEBUG" />
+			<log message="Request payload received : ${in.body}"
+				loggingLevel="DEBUG" />
+			<log message="--------------------" loggingLevel="DEBUG" />
+
+
+			<log message="STEP: VALIDATE REQUEST" loggingLevel="INFO" />
+
+			<validate>
+				<xpath>/in:getCustomerRequest/in:body/in:customerId</xpath>
+			</validate>
+			<validate>
+				<xpath>/in:getCustomerRequest/in:body/in:customerId/text() != ''</xpath>
+			</validate>
+
+
+			<log message="STEP: MAP DATA (IN)" loggingLevel="INFO" />
+			<setHeader headerName="CUSTOMER_ID">
+				<xpath resultType="java.lang.String">/in:getCustomerRequest/in:body/in:customerId/text()</xpath>
+			</setHeader>
+		
+		
+			<log message="STEP: CREATE BSYS REQUEST" loggingLevel="INFO" />
+			<log message="MSG Before TRX :: ${in.body}" loggingLevel="DEBUG" />
+			<to uri="xslt:{{xslt_in}}" />
+			
+			<setHeader headerName="operationName">
+				<constant>getCustomerInfo</constant>
+			</setHeader>
+			<setHeader headerName="operationNamespace">
+				<constant>http://backendSystem/target/</constant>
+			</setHeader>
+			<setHeader headerName="SOAPAction">
+				<constant>http://backendSystem/target/getCustomerInfo</constant>
+			</setHeader>
+
+
+
+			<log message="Request header sent to CustomerService : ${in.headers}"
+				loggingLevel="DEBUG" />
+			<log message="Request payload sent to CustomerService : ${in.body}"
+				loggingLevel="DEBUG" />
+			<log message="------------------------------" loggingLevel="DEBUG" />
+
+
+			<log message="STEP: CALL CustomerService" loggingLevel="INFO" />
+			
+			<to uri="cxf://bean:customerServiceEndpoint" />
+
+			<log message="Received from CustomerService :: ${in.body}" loggingLevel="INFO" />
+			
+			<log message="STEP: TRANSFO RESPONSE" loggingLevel="INFO" />
+			<to uri="xslt:{{xslt_out}}" />	
+			
+			<log message="Request header sent back : ${in.headers}"
+				loggingLevel="DEBUG" />
+			<log message="Request payload sent back : ${in.body}"
+				loggingLevel="DEBUG" />
+			<log message="------------------------------" loggingLevel="DEBUG" />					
+			
+
+		</route>
+
+	</camelContext>
+
+</blueprint>
+

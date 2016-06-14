@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://backendSystem/target/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+	xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://backendSystem/target/">
+
+	<wsdl:types>
+		<s:schema targetNamespace="http://backendSystem/target/">
+			<s:complexType name="getCustomerInfoRequestType"
+				elementFormDefault="qualified">
+				<s:sequence>
+					<s:element xmlns="http://backendSystem/target/" name="externalClientNo"
+						type="s:string" />
+				</s:sequence>
+			</s:complexType>
+			<s:element name="getCustomerInfoRequest" type="tns:getCustomerInfoRequestType"
+				elementFormDefault="qualified" />
+
+			<s:complexType name="getCustomerInfoResponseType"
+				elementFormDefault="qualified">
+				<s:sequence>
+					<s:element name="name" type="s:string" minOccurs="1"
+						maxOccurs="1" />
+					<s:element name="lastname" type="s:string" minOccurs="1"
+						maxOccurs="1" />
+					<s:element name="code" type="s:string" minOccurs="1"
+						maxOccurs="1" />
+				</s:sequence>
+			</s:complexType>
+			<s:element name="getCustomerInfoResponse" type="tns:getCustomerInfoResponseType"
+				elementFormDefault="qualified" />
+		</s:schema>
+	</wsdl:types>
+
+
+	<wsdl:message name="getCustomerInfoSoapIn">
+		<wsdl:part name="parameters" element="tns:getCustomerInfoRequest" />
+	</wsdl:message>
+
+	<wsdl:message name="getCustomerInfoSoapOut">
+		<wsdl:part name="parameters" element="tns:getCustomerInfoResponse" />
+	</wsdl:message>
+
+	<wsdl:portType name="CustomerServicesSoap">
+		<wsdl:operation name="getCustomerInfo">
+			<wsdl:input message="tns:getCustomerInfoSoapIn" />
+			<wsdl:output message="tns:getCustomerInfoSoapOut" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+
+	<wsdl:binding name="CustomerServicesSoap" type="tns:CustomerServicesSoap">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="getCustomerInfo">
+			<soap:operation soapAction="http://backendSystem/target"
+				style="document" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+
+	<wsdl:binding name="CustomerServicesSoap12" type="tns:CustomerServicesSoap">
+		<soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="getCustomerInfo">
+			<soap12:operation soapAction="http://backendSystem/target"
+				style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+
+	<wsdl:service name="CustomerServices">
+		<wsdl:port name="CustomerServicesSoap" binding="tns:CustomerServicesSoap">
+			<soap:address location="http://localhost/target/CustomerServices.asmx" />
+		</wsdl:port>
+		<wsdl:port name="CustomerServicesSoap12" binding="tns:CustomerServicesSoap12">
+			<soap12:address location="http://localhost/target/CustomerServices.asmx" />
+		</wsdl:port>
+	</wsdl:service>
+
+</wsdl:definitions>

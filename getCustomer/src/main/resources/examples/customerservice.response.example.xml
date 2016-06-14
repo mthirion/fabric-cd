@@ -1,0 +1,8 @@
+﻿<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tar="http://backendSystem/target/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tar:getCustomerInfoRequest>
+         <externalClientNo>?</externalClientNo>
+      </tar:getCustomerInfoRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

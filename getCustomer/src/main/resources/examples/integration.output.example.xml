@@ -1,0 +1,13 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <in:getCustomerResponse xmlns:in="urn:org.redhat.integration.cd.customer" xmlns:out="http://backendSystem/target/">
+         <in:body>
+            <in:customer>
+               <in:name>toto</in:name>
+               <in:surname>beebee</in:surname>
+               <in:status>emplo</in:status>
+            </in:customer>
+         </in:body>
+      </in:getCustomerResponse>
+   </soap:Body>
+</soap:Envelope>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="urn:org.redhat.integration.cd.customer" 
+			elementFormDefault="qualified" version="1.0" 
+			xmlns="urn:org.redhat.integration.cd.customer" 
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema" >	
+	
+	<xsd:complexType name="getCustomerFaultType">
+		<xsd:sequence>
+			<xsd:element name="source" type="xsd:string"/>
+			<xsd:element name="code" type="xsd:string" />
+			<xsd:element name="details" type="xsd:anyType"/>
+			<xsd:element name="timestamp" type="xsd:dateTime" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:element name="getCustomerFault" type="getCustomerFaultType"/>
+	
+	
+</xsd:schema>

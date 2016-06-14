@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="urn:org.redhat.integration.cd.customer" elementFormDefault="qualified" version="1.2" 
+xmlns="urn:org.redhat.integration.cd.customer" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+
+	<xsd:complexType name="getCustomerRequestType">
+		<xsd:sequence>
+			<xsd:element name="body">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element ref="customerId"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="getCustomerRequest" type="getCustomerRequestType"/>
+	
+	<xsd:simpleType name="CustomerIdType">
+      <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+    <xsd:element name="customerId" type="CustomerIdType"/>
+
+
+
+
+
+
+
+	<xsd:complexType name="getCustomerResponseType">
+		<xsd:sequence>
+			<xsd:element name="body">
+				<xsd:complexType>
+					<xsd:sequence>
+							<xsd:element ref="customer"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="getCustomerResponse" type="getCustomerResponseType"/>
+	
+    <xsd:complexType name="CustomerType">
+      <xsd:sequence>
+        <xsd:element name="name" type="xsd:string" minOccurs="0"/>
+        <xsd:element name="surname" type="xsd:string" minOccurs="0"/>
+        <xsd:element name="status" type="xsd:string" minOccurs="0"/>
+      </xsd:sequence>
+    </xsd:complexType>
+	<xsd:element name="customer" type="CustomerType"/>
+	
+</xsd:schema>

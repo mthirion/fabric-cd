@@ -1,0 +1,10 @@
+﻿<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:org.redhat.integration.cd.customer">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getCustomerRequest>
+         <urn:body>
+            <urn:customerId>111222</urn:customerId>
+         </urn:body>
+      </urn:getCustomerRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
