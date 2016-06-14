@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:fault xmlns:p="http://www.banqueaudi.com/ebo/util.flt.Fault" xmlns:p1="http://www.banqueaudi.com/ebo/util.cmn.EBMHeader" xmlns:p2="http://www.banqueaudi.com/ebo/util.cmn.Basic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.banqueaudi.com/ebo/util.flt.Fault ../wsdl/util-flt-Fault_1-0.xsd ">
+  <p:source>p:source</p:source>
+  <p:errorList>
+    <p:error>
+      <p:errorCode>p:errorCode</p:errorCode>
+      <p:description>p:description</p:description>
+    </p:error>
+  </p:errorList>
+  <p:details/>
+  <p1:ebmCID>p1:ebmCID</p1:ebmCID>
+  <p1:ebmMID>p1:ebmMID</p1:ebmMID>
+  <p:faultInstanceId>p:faultInstanceId</p:faultInstanceId>
+  <p:propertySet/>
+</p:fault>

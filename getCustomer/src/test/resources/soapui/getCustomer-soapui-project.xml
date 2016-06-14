@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="e2670586-cb48-439f-91e4-d499cfc0900b" activeEnvironment="Default" name="getCustomer_interface" resourceRoot="" soapui-version="5.2.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="c24b778d-09db-429b-b434-5ceb4d796361" wsaVersion="NONE" name="integration.binding.Customer.Binding" type="wsdl" bindingName="{urn:org.redhat.integration.cd.customer}integration.binding.Customer.Binding" soapVersion="1_1" anonymous="optional" definition="file:/redhat/projects/workspace/getCustomer/src/main/resources/wsdl/getCustomer_interface.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/redhat/projects/workspace/getCustomer/src/main/resources/wsdl/getCustomer_interface.wsdl"><con:part><con:url>file:/redhat/projects/workspace/getCustomer/src/main/resources/wsdl/getCustomer_interface.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="integration.Customer" targetNamespace="urn:org.redhat.integration.cd.customer" xmlns:tns="urn:org.redhat.integration.cd.customer" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>Version 1.2</wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="urn:org.redhat.integration.cd.customer" schemaLocation="getCustomer_types.xsd"/>
+      <xsd:import namespace="urn:org.redhat.integration.cd.customer" schemaLocation="getCustomer_fault.xsd"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getCustomerRequestMessage">
+    <wsdl:part element="tns:getCustomerRequest" name="payload"/>
+  </wsdl:message>
+  <wsdl:message name="getCustomerResponseMessage">
+    <wsdl:part element="tns:getCustomerResponse" name="payload"/>
+  </wsdl:message>
+  <wsdl:message name="getCustomerFaultMessage">
+    <wsdl:part element="tns:getCustomerFault" name="payload"/>
+  </wsdl:message>
+  <wsdl:portType name="integration.port.Customer">
+    <wsdl:operation name="getCustomer">
+      <wsdl:input message="tns:getCustomerRequestMessage"/>
+      <wsdl:output message="tns:getCustomerResponseMessage"/>
+      <wsdl:fault message="tns:getCustomerFaultMessage" name="fault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="integration.binding.Customer.Binding" type="tns:integration.port.Customer">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getCustomer">
+      <soap:operation soapAction="getCustomer" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="integration.svc.Customer.BindingQSService">
+    <wsdl:port binding="tns:integration.binding.Customer.Binding" name="integration.binding.Customer.BindingQSPort">
+      <soap:address location="http://localhost:8090/getCustomer"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:/redhat/projects/workspace/getCustomer/src/main/resources/wsdl/getCustomer_types.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:org.redhat.integration.cd.customer" elementFormDefault="qualified" version="1.2" xmlns="urn:org.redhat.integration.cd.customer" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="getCustomerRequestType">
+    <xsd:sequence>
+      <xsd:element name="body">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="customerId"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="getCustomerRequest" type="getCustomerRequestType"/>
+  <xsd:simpleType name="CustomerIdType">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="customerId" type="CustomerIdType"/>
+  <xsd:complexType name="getCustomerResponseType">
+    <xsd:sequence>
+      <xsd:element name="body">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="customer"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="getCustomerResponse" type="getCustomerResponseType"/>
+  <xsd:complexType name="CustomerType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="surname" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="status" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="customer" type="CustomerType"/>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:/redhat/projects/workspace/getCustomer/src/main/resources/wsdl/getCustomer_fault.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:org.redhat.integration.cd.customer" elementFormDefault="qualified" version="1.0" xmlns="urn:org.redhat.integration.cd.customer" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="getCustomerFaultType">
+    <xsd:sequence>
+      <xsd:element name="source" type="xsd:string"/>
+      <xsd:element name="code" type="xsd:string"/>
+      <xsd:element name="details" type="xsd:anyType"/>
+      <xsd:element name="timestamp" type="xsd:dateTime" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="getCustomerFault" type="getCustomerFaultType"/>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8090/getCustomer</con:endpoint><con:endpoint>http://mthirion.remote.csb:8088/mockintegration.binding.Customer.Binding</con:endpoint></con:endpoints><con:operation id="e33e62cb-84f5-4d38-8ae6-c800e97b5edc" isOneWay="false" action="getCustomer" name="getCustomer" bindingOperationName="getCustomer" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="08e3a9af-4495-4e89-a3bf-d115bbf288a3" name="getCustomerRequest"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8060/getCustomer</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:org.redhat.integration.cd.customer">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getCustomerRequest>
+         <urn:body>
+            <urn:customerId>111222</urn:customerId>
+         </urn:body>
+      </urn:getCustomerRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="getCustomer"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="0733c1c5-a972-4f64-8610-699a7f6341eb" name="getCustomer_TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="aa42f1a2-d10f-4cba-b87a-f404f2c892e1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="getCustomer_TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="e2654cfa-6ac9-4c6c-befc-38952d3e0ff3" name="getCustomerRequest"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>integration.binding.Customer.Binding</con:interface><con:operation>getCustomer</con:operation><con:request name="getCustomerRequest" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="6da0c827-8108-49ad-b40c-a43b68d21aad"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8060/getCustomer</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:org.redhat.integration.cd.customer">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:getCustomerRequest>
+         <urn:body>
+            <urn:customerId>111222</urn:customerId>
+         </urn:body>
+      </urn:getCustomerRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="5bc68160-7fcc-415b-b57a-741374cc7d09" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="48bc5ef6-0bae-4edd-8d5b-71ca0c505064" name="Not SOAP Fault"/><con:assertion type="Simple Contains" id="37cdb6bc-a4f9-44a2-b375-22e65eb05f8d" name="Contains_name"><con:configuration><token>name>Michael&lt;</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="abbc11a5-6cef-4428-9274-b5e695a60c96" name="Contains_surname"><con:configuration><token>surname>Thirion&lt;</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="abbc11a5-6cef-4428-9274-b5e695a60c96" name="Contains_status"><con:configuration><token>status>Architect&lt;</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="getCustomer"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:loadTest id="2b9968b5-b8b5-4eda-9ade-a6284e4dc7c8" name="getcustomer_LoadTest"><con:settings/><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"><con:configuration><name>Step Status</name><min-requests>50</min-requests><test-step>getCustomerRequest</test-step><max-errors>2</max-errors></con:configuration></con:assertion><con:assertion type="Step Maximum" name="Step Maximum"><con:configuration><name>Step Maximum</name><min-requests>50</min-requests><max-value>5000</max-value><test-step>getCustomerRequest</test-step><max-errors>2</max-errors></con:configuration></con:assertion><con:assertion type="Step Average" name="Step Average"><con:configuration><name>Step Average</name><min-requests>50</min-requests><max-average>2000</max-average><test-step>getCustomerRequest</test-step><max-errors>2</max-errors><sample-interval>20</sample-interval></con:configuration></con:assertion><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

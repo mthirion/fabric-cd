@@ -1,0 +1,10 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tar="http://backendSystem/target/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tar:getCustomerInfoResponse>
+      	<tar:name>Michael</tar:name>
+      	<tar:lastname>Thirion</tar:lastname>
+      	<tar:code>Architect</tar:code>
+      </tar:getCustomerInfoResponse>
+   </soapenv:Body>
+</soapenv:Envelope>

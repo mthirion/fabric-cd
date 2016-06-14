@@ -1,0 +1,6 @@
+
+<urn:getCustomerRequest xmlns:urn="urn:org.redhat.integration.cd.customer">
+	<urn:body>
+		<urn:customerId>111222</urn:customerId>
+	</urn:body>
+</urn:getCustomerRequest>

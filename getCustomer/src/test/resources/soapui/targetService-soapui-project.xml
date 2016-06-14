@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="a621f920-6733-40d2-8061-91433ca07cd1" activeEnvironment="Default" name="targetService" resourceRoot="" soapui-version="5.2.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="503f9949-f612-4f90-8e78-7d811eacbca3" wsaVersion="NONE" name="CustomerServicesSoap12" type="wsdl" bindingName="{http://backendSystem/target/}CustomerServicesSoap12" soapVersion="1_2" anonymous="optional" definition="file:/redhat/projects/workspace/getCustomer/src/main/resources/wsdl/targetService.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost/target/CustomerServices.asmx</con:endpoint></con:endpoints><con:operation id="a7affc59-7504-4a4e-826e-13354a30e79d" isOneWay="false" action="http://backendSystem/target" name="getCustomerInfo" bindingOperationName="getCustomerInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="19be432a-9198-4d55-a270-a304a8cc5c44" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost/target/CustomerServices.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tar="http://backendSystem/target/">
+   <soap:Header/>
+   <soap:Body>
+      <tar:getCustomerInfoRequest>
+         <externalClientNo>?</externalClientNo>
+      </tar:getCustomerInfoRequest>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://backendSystem/target/CustomerServicesSoap/getCustomerInfoRequest"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="00e41c33-afba-4d6d-b33a-85a20154370b" wsaVersion="NONE" name="CustomerServicesSoap" type="wsdl" bindingName="{http://backendSystem/target/}CustomerServicesSoap" soapVersion="1_1" anonymous="optional" definition="file:/redhat/projects/workspace/getCustomer/src/main/resources/wsdl/targetService.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/redhat/projects/workspace/getCustomer/src/main/resources/wsdl/targetService.wsdl"><con:part><con:url>file:/redhat/projects/workspace/getCustomer/src/main/resources/wsdl/targetService.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://backendSystem/target/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://backendSystem/target/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema targetNamespace="http://backendSystem/target/">
+      <s:complexType name="getCustomerInfoRequestType" elementFormDefault="qualified">
+        <s:sequence>
+          <s:element name="externalClientNo" type="s:string" xmlns="http://backendSystem/target/"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getCustomerInfoRequest" type="tns:getCustomerInfoRequestType" elementFormDefault="qualified"/>
+      <s:complexType name="getCustomerInfoResponseType" elementFormDefault="qualified">
+        <s:sequence>
+          <s:element name="name" type="s:string" minOccurs="1" maxOccurs="1"/>
+          <s:element name="lastname" type="s:string" minOccurs="1" maxOccurs="1"/>
+          <s:element name="code" type="s:string" minOccurs="1" maxOccurs="1"/>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getCustomerInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:getCustomerInfoRequest"/>
+  </wsdl:message>
+  <wsdl:message name="getCustomerInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:getCustomerInfoResponse"/>
+  </wsdl:message>
+  <s:element name="getCustomerInfoResponse" type="tns:getCustomerInfoResponseType"/>
+  <wsdl:portType name="CustomerServicesSoap">
+    <wsdl:operation name="getCustomerInfo">
+      <wsdl:input message="tns:getCustomerInfoSoapIn"/>
+      <wsdl:output message="tns:getCustomerInfoSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CustomerServicesSoap" type="tns:CustomerServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getCustomerInfo">
+      <soap:operation soapAction="http://backendSystem/target" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CustomerServicesSoap12" type="tns:CustomerServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getCustomerInfo">
+      <soap12:operation soapAction="http://backendSystem/target" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CustomerServices">
+    <wsdl:port name="CustomerServicesSoap" binding="tns:CustomerServicesSoap">
+      <soap:address location="http://localhost/target/CustomerServices.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="CustomerServicesSoap12" binding="tns:CustomerServicesSoap12">
+      <soap12:address location="http://localhost/target/CustomerServices.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost/target/CustomerServices.asmx</con:endpoint><con:endpoint>http://mthirion.remote.csb:8068/mocktarget</con:endpoint></con:endpoints><con:operation id="a9374e23-3d68-4d3f-be9e-39c80a435f4b" isOneWay="false" action="http://backendSystem/target" name="getCustomerInfo" bindingOperationName="getCustomerInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="673763d9-78e8-47fe-8538-7f7898825ca6" name="customerServiceRequest"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost/target/CustomerServices.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tar="http://backendSystem/target/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tar:getCustomerInfoRequest>
+         <externalClientNo>?</externalClientNo>
+      </tar:getCustomerInfoRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://backendSystem/target"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:mockService id="eb434ac5-2311-4a0a-85ed-b377b92740a4" port="8068" path="/mocktarget" host="mthirion.remote.csb" name="CustomerServicesMock" bindToHostOnly="false" docroot=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="getCustomerInfo" id="ec317363-aba1-4dca-b7dc-db2a5438b88e" interface="CustomerServicesSoap" operation="getCustomerInfo"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="customerServiceMockResponse" id="e47fa10c-47d5-4fd7-b79c-ddc8800fc2ac" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tar="http://backendSystem/target/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tar:getCustomerInfoResponse>
+      	<tar:name>Michael</tar:name>
+      	<tar:lastname>Thirion</tar:lastname>
+      	<tar:code>Architect</tar:code>
+      </tar:getCustomerInfoResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://backendSystem/target"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>
