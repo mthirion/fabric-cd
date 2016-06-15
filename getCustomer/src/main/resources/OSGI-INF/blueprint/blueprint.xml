@@ -19,10 +19,9 @@
              http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
 
 
-	<cm:property-placeholder persistent-id="environment"
-		id="env.placeholder">
+	<cm:property-placeholder persistent-id="application">
 		<cm:default-properties>
-			<cm:property name="fuse.getcustomer.in" value="http://localhost:8060/getCustomer" />
+			<cm:property name="fuse.getcustomer.in" value="http://localhost:8058/getCustomer" />
 			<cm:property name="fuse.getcustomer.out" value="http://localhost:8068/mocktarget" />
 			<cm:property name="xslt_in" value="xsl/customerTransfoIn.xsl" />
 			<cm:property name="xslt_out" value="xsl/customerTransfoOut.xsl" />
