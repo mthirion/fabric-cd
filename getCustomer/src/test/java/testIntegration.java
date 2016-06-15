@@ -1,5 +1,6 @@
 import java.io.*;
 import java.net.*;
+import java.util.Properties;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -43,7 +44,7 @@ public class testIntegration {
 	    private static final Logger LOG = LoggerFactory.getLogger(testIntegration.class);
 	    
 	    private String mock_request = "xml/request.in.enveloppe.xml";
-	    private String mock_url = "http://localhost:8060/getCustomer";
+	    private String mock_url = getUrl();
 
 	    
 	    /**
@@ -58,7 +59,26 @@ public class testIntegration {
 	        } finally {
 	            in.close();
 	        }
+	        
 	    }
+	    
+	    private static String getUrl() {
+	    	Properties prop = new Properties();
+	    	
+	    	InputStream in = testIntegration.class.getResourceAsStream("application.properties");
+		    if (in == null)
+		    	return "http://localhost:8060/getCustomer";
+		    
+		    try {
+		         prop.load(in);
+		         in.close();
+		     } catch (IOException e) {
+		         e.printStackTrace();
+		     }
+		    
+	    	return prop.getProperty("fuse.getcustomer.in");
+	    }
+	    
 
 	    /**
 	     * Helper method to read bytes from an InputStream and return them as a String.
@@ -109,4 +129,6 @@ public class testIntegration {
 	        }
 	        return new ByteArrayInputStream(sb.toString().getBytes());
 	    }	    
+	    
+
 }
