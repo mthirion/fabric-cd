@@ -45,7 +45,6 @@
 	<!-- SCM FOR THE RELEASE PLUGIN -->
 	<scm>
 		<developerConnection>scm:git:https://github.com/mthirion/fabric-cd.git</developerConnection>
-	  <tag>getCustomer-0.0.1</tag>
   </scm>
 
 	<!-- DEPENDENCY MANAGEMENT -->
