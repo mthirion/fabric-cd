@@ -15,7 +15,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.redhat.integration</groupId>
 	<artifactId>getCustomer</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.1-SNAPHOT</version>
 	<description>an ESB pipe example</description>
 	<packaging>bundle</packaging>
 
