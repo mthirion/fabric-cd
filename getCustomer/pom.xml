@@ -254,7 +254,7 @@
 				<version>1.1.0.CR5</version>
 			</plugin>
 
-<!--  
+  
 			<plugin>
 				<groupId>com.smartbear.soapui</groupId>
 				<artifactId>soapui-maven-plugin</artifactId>
@@ -267,10 +267,10 @@
 							<goal>test</goal>
 						</goals>
 						<configuration>
-							<projectFile>src/test/resources/soapui/Invex-queryCustomer-soapui-project.xml</projectFile>
+							<projectFile>src/test/resources/soapui/getCustomer-soapui-project.xml</projectFile>
 							<settingsFile>src/test/resources/soapui/soapui-settings.xml</settingsFile>
-							<testSuite>queryCustomerTestSuite</testSuite>
-							<testCase>queryCustomerTestCase</testCase>
+							<testSuite>getCustomer_TestSuite</testSuite>
+							<testCase>getCustomer_TestCase</testCase>
 							<printReport>true</printReport>
 							<outputFolder>target/soapui</outputFolder>
 							<projectProperties />
@@ -283,11 +283,11 @@
 							<goal>loadtest</goal>
 						</goals>
 						<configuration>
-							<projectFile>src/test/resources/soapui/Invex-queryCustomer-soapui-project.xml</projectFile>
+							<projectFile>src/test/resources/soapui/getCustomer-soapui-project.xml</projectFile>
 							<settingsFile>src/test/resources/soapui/soapui-settings.xml</settingsFile>
-							<testSuite>queryCustomerTestSuite</testSuite>
-							<testCase>queryCustomerTestCase</testCase>
-							<loadTest>queryCustomerLoadTest</loadTest>
+							<testSuite>getCustomer_TestSuite</testSuite>
+							<testCase>getCustomer_TestCase</testCase>
+							<loadTest>getCustomer_LoadTest</loadTest>
 							<printReport>true</printReport>
 							<outputFolder>target/soapui</outputFolder>
 							<projectProperties />
@@ -295,7 +295,6 @@
 					</execution>
 				</executions>
 			</plugin>
--->
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
