@@ -15,7 +15,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.redhat.integration</groupId>
 	<artifactId>getCustomer</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<description>an ESB pipe example</description>
 	<packaging>bundle</packaging>
 
@@ -45,7 +45,7 @@
 	<!-- SCM FOR THE RELEASE PLUGIN -->
 	<scm>
 		<developerConnection>scm:git:https://github.com/mthirion/fabric-cd.git</developerConnection>
-	  <tag>getCustomer-0.0.2</tag>
+	  <tag>HEAD</tag>
   </scm>
 
 	<!-- DEPENDENCY MANAGEMENT -->
