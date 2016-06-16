@@ -234,7 +234,7 @@ git push<y:LabelModel>
               <y:Geometry height="60.0" width="110.21871539313395" x="-945.856866002215" y="514.7785160575859"/>
               <y:Fill color="#CCFFFF" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="22.625" modelName="custom" textColor="#000000" visible="true" width="101.4296875" x="4.394513946567031" y="18.6875">SNAPSHOTS<y:LabelModel>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="22.625" modelName="custom" textColor="#000000" visible="true" width="101.4296875" x="4.394513946566917" y="18.6875">SNAPSHOTS<y:LabelModel>
                   <y:SmartNodeLabelModel distance="4.0"/>
                 </y:LabelModel>
                 <y:ModelParameter>
@@ -284,7 +284,7 @@ branch<y:LabelModel>
           <data key="d6">
             <y:ShapeNode>
               <y:Geometry height="60.0" width="99.656699889258" x="-291.47978959025465" y="369.51289105758576"/>
-              <y:Fill color="#99CCFF" transparent="false"/>
+              <y:Fill color="#666699" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="31.9375" modelName="custom" textColor="#000000" visible="true" width="99.28515625" x="0.18577181962899658" y="14.03125">mvn
 release:prepare<y:LabelModel>
@@ -338,7 +338,7 @@ release:prepare<y:LabelModel>
               <y:Geometry height="60.0" width="90.0" x="600.6398117386487" y="966.0285160575854"/>
               <y:Fill color="#C0C0C0" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="22.625" modelName="custom" textColor="#000000" visible="true" width="49.4140625" x="20.29296875" y="18.687499999999886">fabric<y:LabelModel>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="22.625" modelName="custom" textColor="#000000" visible="true" width="49.4140625" x="20.29296875" y="18.6875">fabric<y:LabelModel>
                   <y:SmartNodeLabelModel distance="4.0"/>
                 </y:LabelModel>
                 <y:ModelParameter>
@@ -353,7 +353,7 @@ release:prepare<y:LabelModel>
           <data key="d6">
             <y:ShapeNode>
               <y:Geometry height="60.0" width="90.0" x="-662.4473975636766" y="369.5128910575858"/>
-              <y:Fill color="#CCFFFF" transparent="false"/>
+              <y:Fill color="#3366FF" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="41.25" modelName="custom" textColor="#000000" visible="true" width="88.6328125" x="0.68359375" y="9.375">mvn 
 test -Dtest<y:LabelModel>
@@ -373,7 +373,7 @@ test -Dtest<y:LabelModel>
               <y:Geometry height="60.0" width="99.656699889258" x="-940.575858250277" y="369.5128910575858"/>
               <y:Fill color="#CCFFFF" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="59.875" modelName="custom" textColor="#000000" visible="true" width="98.140625" x="0.7580374446289397" y="0.0625">mvn deploy
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="59.875" modelName="custom" textColor="#000000" visible="true" width="98.140625" x="0.7580374446290534" y="0.0625">mvn deploy
 :snapshots
 :skipTests<y:LabelModel>
                   <y:SmartNodeLabelModel distance="4.0"/>
@@ -502,7 +502,7 @@ integration-test<y:LabelModel>
               <y:Geometry height="60.0" width="99.656699889258" x="720.6398117386487" y="369.5128910575857"/>
               <y:Fill color="#C0C0C0" transparent="false"/>
               <y:BorderStyle color="#000000" type="line" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="41.25" modelName="custom" textColor="#000000" visible="true" width="49.4375" x="25.109599944628997" y="9.375">mvn 
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="16" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="41.25" modelName="custom" textColor="#000000" visible="true" width="49.4375" x="25.10959994462894" y="9.375">mvn 
 verify<y:LabelModel>
                   <y:SmartNodeLabelModel distance="4.0"/>
                 </y:LabelModel>
@@ -847,7 +847,6 @@ branch<y:LabelModel>
       </data>
     </edge>
     <edge id="n0::e17" source="n0::n23" target="n0::n0">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -858,7 +857,6 @@ branch<y:LabelModel>
       </data>
     </edge>
     <edge id="n0::e18" source="n0::n23" target="n0::n1">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -869,7 +867,6 @@ branch<y:LabelModel>
       </data>
     </edge>
     <edge id="n0::e19" source="n0::n18" target="n0::n3">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -888,7 +885,6 @@ branch<y:LabelModel>
       </data>
     </edge>
     <edge id="n0::e20" source="n0::n26" target="n0::n0">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -899,7 +895,6 @@ branch<y:LabelModel>
       </data>
     </edge>
     <edge id="n0::e21" source="n0::n26" target="n0::n22">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -918,7 +913,6 @@ branch<y:LabelModel>
       </data>
     </edge>
     <edge id="n0::e22" source="n0::n25" target="n0::n24">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -937,7 +931,6 @@ branch<y:LabelModel>
       </data>
     </edge>
     <edge id="n0::e23" source="n0::n25" target="n0::n19">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -948,7 +941,6 @@ branch<y:LabelModel>
       </data>
     </edge>
     <edge id="n0::e24" source="n0::n25" target="n0::n14">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -959,7 +951,6 @@ branch<y:LabelModel>
       </data>
     </edge>
     <edge id="n0::e25" source="n0::n28" target="n0::n8">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -970,7 +961,6 @@ branch<y:LabelModel>
       </data>
     </edge>
     <edge id="n0::e26" source="n0::n27" target="n0::n24">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -981,7 +971,6 @@ branch<y:LabelModel>
       </data>
     </edge>
     <edge id="n0::e27" source="n0::n27" target="n0::n28">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="-20.849529346622717" ty="5.6843418860808015E-14"/>
@@ -992,7 +981,6 @@ branch<y:LabelModel>
       </data>
     </edge>
     <edge id="n0::e28" source="n0::n28" target="n0::n9">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1003,7 +991,6 @@ branch<y:LabelModel>
       </data>
     </edge>
     <edge id="n0::e29" source="n0::n29" target="n0::n8">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1014,7 +1001,6 @@ branch<y:LabelModel>
       </data>
     </edge>
     <edge id="n0::e30" source="n0::n29" target="n0::n16">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1025,7 +1011,6 @@ branch<y:LabelModel>
       </data>
     </edge>
     <edge id="n0::e31" source="n0::n30" target="n0::n8">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1036,7 +1021,6 @@ branch<y:LabelModel>
       </data>
     </edge>
     <edge id="n0::e32" source="n0::n30" target="n0::n17">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
