@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.maven.MavenModuleSetBuild plugin="maven-plugin@2.7.1">
+  <actions>
+    <hudson.model.ParametersAction>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>JOLOKIA_URL</name>
+          <description></description>
+          <value>http://localhost:8181/jolokia</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>SOAPUI_HOME</name>
+          <description></description>
+          <value>/redhat/platforms/test/soapui</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>MOCK_NAME</name>
+          <description></description>
+          <value>CustomerServicesMock</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause/>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <hudson.plugins.git.util.BuildData plugin="git@2.4.4">
+      <buildsByBranchName>
+        <entry>
+          <string>refs/remotes/origin/dev</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@1.19.6">
+              <sha1>7f1504393b3e13b7c466b09c5c1b299ea4f48e92</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/dev</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>3</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>https://github.com/mthirion/fabric-cd.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <hudson.plugins.git.GitTagAction plugin="git@2.4.4">
+      <tags class="hudson.util.CopyOnWriteMap$Tree">
+        <entry>
+          <string>refs/remotes/origin/dev</string>
+          <list/>
+        </entry>
+      </tags>
+      <ws>/redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace</ws>
+    </hudson.plugins.git.GitTagAction>
+    <hudson.scm.SCMRevisionState_-None/>
+    <hudson.maven.MavenProbeAction>
+      <owner class="hudson.maven.MavenModuleSet">
+        <actions/>
+        <description>Perform system tests&#xd;
+Using surefire </description>
+        <keepDependencies>false</keepDependencies>
+        <properties>
+          <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.18.1">
+            <projectUrl>https://github.com/mthirion/fabric-cd.git/</projectUrl>
+            <displayName></displayName>
+          </com.coravy.hudson.plugins.github.GithubProjectProperty>
+          <hudson.model.ParametersDefinitionProperty>
+            <parameterDefinitions>
+              <hudson.model.StringParameterDefinition>
+                <name>JOLOKIA_URL</name>
+                <description></description>
+                <defaultValue>http://localhost:8181/jolokia</defaultValue>
+              </hudson.model.StringParameterDefinition>
+              <hudson.model.StringParameterDefinition>
+                <name>SOAPUI_HOME</name>
+                <description></description>
+                <defaultValue>/redhat/platforms/test/soapui</defaultValue>
+              </hudson.model.StringParameterDefinition>
+              <hudson.model.StringParameterDefinition>
+                <name>MOCK_NAME</name>
+                <description></description>
+                <defaultValue>CustomerServicesMock</defaultValue>
+              </hudson.model.StringParameterDefinition>
+            </parameterDefinitions>
+          </hudson.model.ParametersDefinitionProperty>
+        </properties>
+        <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.4">
+          <configVersion>2</configVersion>
+          <userRemoteConfigs>
+            <hudson.plugins.git.UserRemoteConfig>
+              <url>https://github.com/mthirion/fabric-cd.git</url>
+              <credentialsId>8b74965b-1255-41a5-ac32-09713bb05278</credentialsId>
+            </hudson.plugins.git.UserRemoteConfig>
+          </userRemoteConfigs>
+          <branches>
+            <hudson.plugins.git.BranchSpec>
+              <name>*/dev</name>
+            </hudson.plugins.git.BranchSpec>
+          </branches>
+          <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+          <submoduleCfg class="list"/>
+          <extensions/>
+        </scm>
+        <canRoam>true</canRoam>
+        <disabled>false</disabled>
+        <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+        <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+        <triggers/>
+        <concurrentBuild>false</concurrentBuild>
+        <rootModule>
+          <groupId>org.redhat.integration</groupId>
+          <artifactId>getCustomer</artifactId>
+        </rootModule>
+        <rootPOM>getCustomer/pom.xml</rootPOM>
+        <goals>test -Dtest=testIntegration</goals>
+        <aggregatorStyleBuild>true</aggregatorStyleBuild>
+        <incrementalBuild>false</incrementalBuild>
+        <ignoreUpstremChanges>true</ignoreUpstremChanges>
+        <archivingDisabled>false</archivingDisabled>
+        <siteArchivingDisabled>false</siteArchivingDisabled>
+        <fingerprintingDisabled>false</fingerprintingDisabled>
+        <resolveDependencies>false</resolveDependencies>
+        <processPlugins>false</processPlugins>
+        <mavenValidationLevel>-1</mavenValidationLevel>
+        <runHeadless>false</runHeadless>
+        <disableTriggerDownstreamProjects>false</disableTriggerDownstreamProjects>
+        <blockTriggerWhenBuilding>true</blockTriggerWhenBuilding>
+        <settings class="jenkins.mvn.FilePathSettingsProvider">
+          <path>/redhat/platforms/dev/maven/conf/settings.xml</path>
+        </settings>
+        <globalSettings class="jenkins.mvn.FilePathGlobalSettingsProvider">
+          <path>/redhat/platforms/dev/maven/conf/settings.xml</path>
+        </globalSettings>
+        <reporters/>
+        <publishers/>
+        <buildWrappers/>
+        <prebuilders>
+          <hudson.tasks.Shell>
+            <command>echo &quot;temporary copying soapui files into jenkins workspace&quot;;
+mkdir -p ${WORKSPACE}/src/test/resources/soapui;
+cp ${WORKSPACE}/getCustomer/src/test/resources/soapui/*.xml ${WORKSPACE}/src/test/resources/soapui/
+</command>
+          </hudson.tasks.Shell>
+          <hudson.tasks.Shell>
+            <command>echo &quot;starting mock service&quot;;
+${SOAPUI_HOME}/bin/mockservicerunner.sh -m ${MOCK_NAME} ${WORKSPACE}/targetService-soapui-project.xml &amp;
+echo $? &gt; ${WORKSPACE}/src/test/mock.pid
+
+cat ${WORKSPACE}/src/test/mock.pid
+ps -ef | grep `cat ${WORKSPACE}/src/test/mock.pid`</command>
+          </hudson.tasks.Shell>
+        </prebuilders>
+        <postbuilders>
+          <hudson.tasks.Shell>
+            <command>echo &quot;stopping mock service&quot;;
+if [[ -r ${WORKSPACE}/mock.pid ]]
+then
+	kill `cat ${WORKSPACE}/mock.pid`
+fi;</command>
+          </hudson.tasks.Shell>
+          <hudson.tasks.Shell>
+            <command>echo &quot;cleaning jenkins workspace from soapui files&quot;;
+rm -rf ${WORKSPACE}/src</command>
+          </hudson.tasks.Shell>
+        </postbuilders>
+        <runPostStepsIfResult>FAILURE</runPostStepsIfResult>
+      </owner>
+    </hudson.maven.MavenProbeAction>
+    <hudson.maven.reporters.SurefireAggregatedReport>
+      <descriptions class="concurrent-hash-map"/>
+      <failCount>1</failCount>
+      <skipCount>0</skipCount>
+      <totalCount>1</totalCount>
+      <children>
+        <hudson.tasks.test.AggregatedTestResultAction_-Child plugin="junit@1.11">
+          <name>org.redhat.integration:getCustomer</name>
+          <build>3</build>
+        </hudson.tasks.test.AggregatedTestResultAction_-Child>
+      </children>
+    </hudson.maven.reporters.SurefireAggregatedReport>
+    <hudson.maven.reporters.MavenAggregatedArtifactRecord>
+      <records/>
+      <parent reference="../../.."/>
+    </hudson.maven.reporters.MavenAggregatedArtifactRecord>
+  </actions>
+  <queueId>42</queueId>
+  <timestamp>1465987009478</timestamp>
+  <startTime>1465987009491</startTime>
+  <duration>0</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace</workspace>
+  <hudsonVersion>2.0</hudsonVersion>
+  <scm class="hudson.plugins.git.GitChangeLogParser" plugin="git@2.4.4">
+    <authorOrCommitter>false</authorOrCommitter>
+  </scm>
+  <mavenVersionUsed>3.3.9</mavenVersionUsed>
+</hudson.maven.MavenModuleSetBuild>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<result plugin="junit@1.11">
+  <suites>
+    <suite>
+      <file>/redhat/platforms/ci/jenkins/jobs/getCustomer_CI/workspace/getCustomer/target/surefire-reports/TEST-BlueprintUnitTest.xml</file>
+      <name>BlueprintUnitTest</name>
+      <duration>3.547</duration>
+      <cases>
+        <case>
+          <duration>3.547</duration>
+          <className>BlueprintUnitTest</className>
+          <testName>doTest</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+      </cases>
+    </suite>
+  </suites>
+  <duration>3.547</duration>
+  <keepLongStdio>false</keepLongStdio>
+</result>

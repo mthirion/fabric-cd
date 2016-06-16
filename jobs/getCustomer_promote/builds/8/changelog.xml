@@ -1,0 +1,11 @@
+commit 8660511455b0f5a939e628b6abf41551fae79b44
+tree aaa51ab2aa2c4797723ddac5a6d8eda1f0d87a49
+parent d86c2a1a37d8f9d9619eee2ad9f585847fbeaa0e
+author Michael Thirion <mthirion@mthirion.remote.csb> 2016-06-15 17:26:01 +0200
+committer Michael Thirion <mthirion@mthirion.remote.csb> 2016-06-15 17:26:01 +0200
+
+    Add SCM param for release plugin
+
+
+
+:100644 100644 496e2a67d01d4a887bfbb9a096b87d43e1faf73c 21a254370897c566f680c332214dcce425dfaa4b M	getCustomer/pom.xml

@@ -1,0 +1,22 @@
+commit 32c470ee083048115665aff84741d1f184a18299
+tree 5bd9f02ea55b8b6e4c0356f0c590a479b7a5c788
+parent 4cfe3c3d88941c731c96ba354c22e37256795d31
+author mthirion <mthirion@redhat.com> 2016-06-15 19:16:58 +0200
+committer GitHub <noreply@github.com> 2016-06-15 19:16:58 +0200
+
+    Update pom.xml
+
+
+
+:100644 100644 024f167712a62a6d7c8c49a407cc0043b20f5413 892552f9ec5266b265f1bf45b6790cf7fbb41b8c M	getCustomer/pom.xml
+commit 4cfe3c3d88941c731c96ba354c22e37256795d31
+tree f543207fa4136330f578cef4a37186b2207213ea
+parent 066c29660d72f1cf40b17bf7c3396790dd01ecc9
+author mthirion <mthirion@redhat.com> 2016-06-15 19:14:55 +0200
+committer GitHub <noreply@github.com> 2016-06-15 19:14:55 +0200
+
+    Update pom.xml
+
+
+
+:100644 100644 ac8146bce56a7c69335e6492309323d2376706c7 024f167712a62a6d7c8c49a407cc0043b20f5413 M	getCustomer/pom.xml

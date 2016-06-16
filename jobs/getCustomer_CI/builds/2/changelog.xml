@@ -1,0 +1,13 @@
+commit 7f1504393b3e13b7c466b09c5c1b299ea4f48e92
+tree 4250bb70e88936709e2559fe5b10070c17450b84
+parent 75495ac6e2fa177046bbea59b0c1c37c29066065
+author Michael Thirion <mthirion@mthirion.remote.csb> 2016-06-15 09:59:21 +0200
+committer Michael Thirion <mthirion@mthirion.remote.csb> 2016-06-15 09:59:21 +0200
+
+    Fix PID properties
+
+
+
+:000000 100644 0000000000000000000000000000000000000000 bd47cf3985b149e36ed76408f8c7c1cb0fe26be8 A	getCustomer/src/main/fabric8/application.properties
+:100644 100644 d3c65a1a97077243ff9228b3fc2c0dac12c2fa22 7dbef7d0dfdc5dd7ce2284510bf9a90ea4fda66a M	getCustomer/src/main/resources/OSGI-INF/blueprint/blueprint.xml
+:100644 000000 4b10332984f4e571ce929817f210613b50d98656 0000000000000000000000000000000000000000 D	getCustomer/src/main/resources/application.properties

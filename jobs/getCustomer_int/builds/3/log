@@ -1,0 +1,395 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Building in workspace /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/mthirion/fabric-cd.git # timeout=10
+Fetching upstream changes from https://github.com/mthirion/fabric-cd.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username mthirion # timeout=10
+ > git config --local credential.helper store --file=/tmp/git5067326895415822028.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/mthirion/fabric-cd.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/release^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/release^{commit} # timeout=10
+Checking out Revision d2282f6a6790d4f3a12afe1bb8d16d0d59d3cf0e (refs/remotes/origin/release)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d2282f6a6790d4f3a12afe1bb8d16d0d59d3cf0e
+ > git rev-list d2282f6a6790d4f3a12afe1bb8d16d0d59d3cf0e # timeout=10
+[workspace] $ /redhat/platforms/dev/maven/bin/mvn -f getCustomer/pom.xml -s /redhat/platforms/dev/maven/conf/settings.xml -gs /redhat/platforms/dev/maven/conf/settings.xml -DJOLOKIA_URL=http://localhost:8181/jolokia deploy -Dmaven.test.skip=true
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Some problems were encountered while building the effective settings
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Unrecognised tag: 'repository' (position: START_TAG seen ...<!--\n\t     BPMS INTERNAL REPOSITORY\n\t-->\n        <repository>... @80:21)  @ /redhat/platforms/dev/maven/conf/settings.xml, line 80, column 21
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Unrecognised tag: 'repository' (position: START_TAG seen ...<!--\n\t     BPMS INTERNAL REPOSITORY\n\t-->\n        <repository>... @80:21)  @ /redhat/platforms/dev/maven/conf/settings.xml, line 80, column 21
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building getCustomer 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ getCustomer ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 11 resources
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ getCustomer ---
+[INFO] No sources to compile
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ getCustomer ---
+[INFO] Not copying test resources
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ getCustomer ---
+[INFO] Not compiling test sources
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.15:test (default-test) @ getCustomer ---
+[INFO] Tests are skipped.
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-bundle-plugin:2.3.7:bundle (default-bundle) @ getCustomer ---
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- soapui-maven-plugin:5.2.1:test (robustness-testing) @ getCustomer ---
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- soapui-maven-plugin:5.2.1:loadtest (perf-testing) @ getCustomer ---
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ getCustomer ---
+[INFO] Installing /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/getCustomer/target/shared.jar to /redhat/platforms/dev/installs/maven/local/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-SNAPSHOT.jar
+[INFO] Installing /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/getCustomer/pom.xml to /redhat/platforms/dev/installs/maven/local/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-SNAPSHOT.pom
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-bundle-plugin:2.3.7:install (default-install) @ getCustomer ---
+[INFO] Installing org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-SNAPSHOT.jar
+[INFO] Writing OBR metadata
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-deploy-plugin:2.8.2:deploy (default-deploy) @ getCustomer ---
+Downloading: http://127.0.0.1:8081/nexus/content/repositories/snapshots/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/maven-metadata.xml
+783/783 B               Downloaded: http://127.0.0.1:8081/nexus/content/repositories/snapshots/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/maven-metadata.xml (783 B at 10.9 KB/sec)
+Uploading: http://127.0.0.1:8081/nexus/content/repositories/snapshots/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-20160616.093235-8.jar
+2/12 KB     4/12 KB   6/12 KB   8/12 KB   10/12 KB   12/12 KB              Uploaded: http://127.0.0.1:8081/nexus/content/repositories/snapshots/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-20160616.093235-8.jar (12 KB at 134.7 KB/sec)
+Uploading: http://127.0.0.1:8081/nexus/content/repositories/snapshots/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-20160616.093235-8.pom
+2/10 KB    4/10 KB   6/10 KB   8/10 KB   10/10 KB              Uploaded: http://127.0.0.1:8081/nexus/content/repositories/snapshots/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-20160616.093235-8.pom (10 KB at 228.2 KB/sec)
+Downloading: http://127.0.0.1:8081/nexus/content/repositories/snapshots/org/redhat/integration/getCustomer/maven-metadata.xml
+293/293 B               Downloaded: http://127.0.0.1:8081/nexus/content/repositories/snapshots/org/redhat/integration/getCustomer/maven-metadata.xml (293 B at 15.9 KB/sec)
+Uploading: http://127.0.0.1:8081/nexus/content/repositories/snapshots/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/maven-metadata.xml
+783/783 B               Uploaded: http://127.0.0.1:8081/nexus/content/repositories/snapshots/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/maven-metadata.xml (783 B at 19.1 KB/sec)
+Uploading: http://127.0.0.1:8081/nexus/content/repositories/snapshots/org/redhat/integration/getCustomer/maven-metadata.xml
+293/293 B               Uploaded: http://127.0.0.1:8081/nexus/content/repositories/snapshots/org/redhat/integration/getCustomer/maven-metadata.xml (293 B at 5.6 KB/sec)
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-bundle-plugin:2.3.7:deploy (default-deploy) @ getCustomer ---
+[INFO] Remote OBR update disabled (enable with -DremoteOBR)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.628 s
+[INFO] Finished at: 2016-06-16T11:32:36+02:00
+[INFO] Final Memory: 27M/292M
+[INFO] ------------------------------------------------------------------------
+Parsing POMs
+[getCustomer] $ /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.65-2.b17.el7_1.x86_64/bin/java -cp /redhat/platforms/ci/jenkins/plugins/maven-plugin/WEB-INF/lib/maven31-agent-1.5.jar:/redhat/platforms/dev/maven/boot/plexus-classworlds-2.5.2.jar:/redhat/platforms/dev/maven/conf/logging jenkins.maven3.agent.Maven31Main /redhat/platforms/dev/maven /redhat/platforms/ci/jenkins/war/WEB-INF/lib/remoting-2.56.jar /redhat/platforms/ci/jenkins/plugins/maven-plugin/WEB-INF/lib/maven31-interceptor-1.5.jar /redhat/platforms/ci/jenkins/plugins/maven-plugin/WEB-INF/lib/maven3-interceptor-commons-1.5.jar 34596
+<===[JENKINS REMOTING CAPACITY]===>   channel started
+Executing Maven:  -B -f /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/getCustomer/pom.xml -s /redhat/platforms/dev/maven/conf/settings.xml -gs /redhat/platforms/dev/maven/conf/settings.xml fabric8:deploy -Dfabric8.jolokiaUrl=http://localhost:8181/jolokia -Dmaven.test.skip=true
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Some problems were encountered while building the effective settings
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Unrecognised tag: 'repository' (position: START_TAG seen ...<!--\n\t     BPMS INTERNAL REPOSITORY\n\t-->\n        <repository>... @80:21)  @ /redhat/platforms/dev/maven/conf/settings.xml, line 80, column 21
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Unrecognised tag: 'repository' (position: START_TAG seen ...<!--\n\t     BPMS INTERNAL REPOSITORY\n\t-->\n        <repository>... @80:21)  @ /redhat/platforms/dev/maven/conf/settings.xml, line 80, column 21
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building getCustomer 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> fabric8-maven-plugin:1.1.0.CR5:deploy (default-cli) > install @ getCustomer >>>
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ getCustomer ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 11 resources
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ getCustomer ---
+[INFO] No sources to compile
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ getCustomer ---
+[INFO] Not copying test resources
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ getCustomer ---
+[INFO] Not compiling test sources
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.15:test (default-test) @ getCustomer ---
+[INFO] Tests are skipped.
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-bundle-plugin:2.3.7:bundle (default-bundle) @ getCustomer ---
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- soapui-maven-plugin:5.2.1:test (robustness-testing) @ getCustomer ---
+[JENKINS] Recording test results
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- soapui-maven-plugin:5.2.1:loadtest (perf-testing) @ getCustomer ---
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ getCustomer ---
+[INFO] Installing /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/getCustomer/target/shared.jar to /redhat/platforms/dev/installs/maven/local/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-SNAPSHOT.jar
+[INFO] Installing /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/getCustomer/pom.xml to /redhat/platforms/dev/installs/maven/local/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-SNAPSHOT.pom
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-bundle-plugin:2.3.7:install (default-install) @ getCustomer ---
+[INFO] Installing org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-SNAPSHOT.jar
+[INFO] Writing OBR metadata
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Failed to getClass for io.fabric8.maven.DeployToProfileMojo
+[INFO] 
+[INFO] <<< fabric8-maven-plugin:1.1.0.CR5:deploy (default-cli) < install @ getCustomer <<<
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- fabric8-maven-plugin:1.1.0.CR5:deploy (default-cli) @ getCustomer ---
+[INFO] Adding needed remote repository: http://repository.jboss.org/nexus/content/groups/fs-public/
+[INFO] Uploading file /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/getCustomer/pom.xml
+[INFO] Downloading: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/maven-metadata.xml
+[INFO] Downloaded: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/maven-metadata.xml (964 B at 4.5 KB/sec)
+[INFO] Uploading: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-20160616.093246-1.jar
+[INFO] Uploaded: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-20160616.093246-1.jar (10 KB at 299.6 KB/sec)
+[INFO] Uploading: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-20160616.093246-1.pom
+[INFO] Uploaded: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-20160616.093246-1.pom (10 KB at 435.7 KB/sec)
+[INFO] Downloading: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/maven-metadata.xml
+[INFO] Downloaded: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/maven-metadata.xml (338 B at 9.4 KB/sec)
+[INFO] Uploading: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/maven-metadata.xml
+[INFO] Uploaded: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/maven-metadata.xml (783 B at 42.5 KB/sec)
+[INFO] Uploading: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/maven-metadata.xml
+[INFO] Uploaded: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/maven-metadata.xml (329 B at 22.9 KB/sec)
+[INFO] Uploading file /redhat/platforms/dev/installs/maven/local/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-SNAPSHOT.jar
+[INFO] Uploading: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-20160616.093246-1.jar
+[INFO] Uploaded: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-20160616.093246-1.jar (12 KB at 609.8 KB/sec)
+[INFO] Uploading: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-20160616.093246-1.pom
+[INFO] Uploaded: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-20160616.093246-1.pom (10 KB at 355.0 KB/sec)
+[INFO] Uploading: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/maven-metadata.xml
+[INFO] Uploaded: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/maven-metadata.xml (783 B at 36.4 KB/sec)
+[INFO] Updating profile: redhat-getCustomer with parent profile(s): [feature-camel, feature-cxf]
+[INFO] About to invoke mbean io.fabric8:type=ProjectDeployer on jolokia URL: http://localhost:8181/jolokia with user: admin
+[INFO] 
+[INFO] Profile page: /index.html#/wiki/branch/1.0/view/fabric/profiles/redhat/getCustomer.profile
+[INFO] 
+[INFO] Uploading file application.properties to invoke mbean io.fabric8:type=Fabric on jolokia URL: http://localhost:8181/jolokia with user: admin
+[INFO] Performing profile refresh on mbean: io.fabric8:type=Fabric version: 1.0 profile: redhat-getCustomer
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 10.133 s
+[INFO] Finished at: 2016-06-16T11:32:49+02:00
+[INFO] Final Memory: 40M/567M
+[INFO] ------------------------------------------------------------------------
+Waiting for Jenkins to finish collecting data
+[JENKINS] Archiving /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/getCustomer/pom.xml to org.redhat.integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-SNAPSHOT.pom
+[JENKINS] Archiving /redhat/platforms/dev/installs/maven/local/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-SNAPSHOT.jar to org.redhat.integration/getCustomer/0.0.1-20160616.093246-1/getCustomer-0.0.1-20160616.093246-1.jar
+/redhat/platforms/dev/installs/maven/local/org/redhat/integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-SNAPSHOT.jar is not inside /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/getCustomer/; will archive in a separate pass
+channel stopped
+[workspace] $ /redhat/platforms/dev/maven/bin/mvn -f getCustomer/pom.xml -s /redhat/platforms/dev/maven/conf/settings.xml -gs /redhat/platforms/dev/maven/conf/settings.xml -DJOLOKIA_URL=http://localhost:8181/jolokia integration-test
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Some problems were encountered while building the effective settings
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Unrecognised tag: 'repository' (position: START_TAG seen ...<!--\n\t     BPMS INTERNAL REPOSITORY\n\t-->\n        <repository>... @80:21)  @ /redhat/platforms/dev/maven/conf/settings.xml, line 80, column 21
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Unrecognised tag: 'repository' (position: START_TAG seen ...<!--\n\t     BPMS INTERNAL REPOSITORY\n\t-->\n        <repository>... @80:21)  @ /redhat/platforms/dev/maven/conf/settings.xml, line 80, column 21
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building getCustomer 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ getCustomer ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 11 resources
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ getCustomer ---
+[INFO] No sources to compile
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ getCustomer ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 10 resources
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ getCustomer ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/getCustomer/target/test-classes
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.15:test (default-test) @ getCustomer ---
+[INFO] Surefire report directory: /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/getCustomer/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running BlueprintUnitTest
+Using Blueprint XML file: /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/getCustomer/target/classes/OSGI-INF/blueprint/blueprint.xml
+Copy thread finished.
+Camel activator starting
+Camel activator started
+Registered blueprint namespace handler for http://cxf.apache.org/blueprint/jaxrs
+Registered blueprint namespace handler for http://cxf.apache.org/blueprint/jaxrs-client
+Registered blueprint namespace handler for http://cxf.apache.org/clustering
+Registered blueprint namespace handler for http://cxf.apache.org/transports/http-jetty/configuration
+Adding the extensions from bundle org.apache.camel.camel-cxf-transport (12) [org.apache.camel.component.cxf.transport.CamelTransportFactory]
+Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-http-jetty (22) [org.apache.cxf.transport.http_jetty.JettyDestinationFactory, org.apache.cxf.transport.http_jetty.JettyHTTPServerEngineFactory, org.apache.cxf.transport.http.ContinuationProviderFactory]
+Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-http (27) [org.apache.cxf.transport.http.HTTPTransportFactory, org.apache.cxf.transport.http.HTTPWSDLExtensionLoader, org.apache.cxf.transport.http.policy.HTTPClientAssertionBuilder, org.apache.cxf.transport.http.policy.HTTPServerAssertionBuilder, org.apache.cxf.transport.http.policy.NoOpPolicyInterceptorProvider]
+Adding the extensions from bundle org.apache.cxf.cxf-rt-frontend-jaxws (35) [org.apache.cxf.jaxws.context.WebServiceContextResourceResolver]
+Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-xml (36) [org.apache.cxf.binding.xml.XMLBindingFactory, org.apache.cxf.binding.xml.wsdl11.XMLWSDLExtensionLoader]
+Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-addr (38) [org.apache.cxf.ws.addressing.policy.AddressingAssertionBuilder, org.apache.cxf.ws.addressing.policy.UsingAddressingAssertionBuilder, org.apache.cxf.ws.addressing.policy.AddressingPolicyInterceptorProvider, org.apache.cxf.ws.addressing.impl.AddressingWSDLExtensionLoader, org.apache.cxf.ws.addressing.WSAddressingFeature$WSAddressingFeatureApplier, org.apache.cxf.ws.addressing.MAPAggregator$MAPAggregatorLoader]
+Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-policy (39) [org.apache.cxf.ws.policy.PolicyEngine, org.apache.cxf.policy.PolicyDataEngine, org.apache.cxf.ws.policy.AssertionBuilderRegistry, org.apache.cxf.ws.policy.PolicyInterceptorProviderRegistry, org.apache.cxf.ws.policy.PolicyBuilder, org.apache.cxf.ws.policy.PolicyAnnotationListener, org.apache.cxf.ws.policy.attachment.ServiceModelPolicyProvider, org.apache.cxf.ws.policy.attachment.external.DomainExpressionBuilderRegistry, org.apache.cxf.ws.policy.attachment.external.EndpointReferenceDomainExpressionBuilder, org.apache.cxf.ws.policy.attachment.external.URIDomainExpressionBuilder, org.apache.cxf.ws.policy.attachment.wsdl11.Wsdl11AttachmentPolicyProvider, org.apache.cxf.ws.policy.mtom.MTOMAssertionBuilder, org.apache.cxf.ws.policy.mtom.MTOMPolicyInterceptorProvider]
+Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-soap (41) [org.apache.cxf.binding.soap.SoapBindingFactory, org.apache.cxf.binding.soap.SoapTransportFactory]
+Adding the extensions from bundle org.apache.cxf.cxf-rt-wsdl (42) [org.apache.cxf.wsdl.WSDLManager]
+Registered blueprint namespace handler for http://cxf.apache.org/blueprint/core
+Registered blueprint namespace handler for http://cxf.apache.org/configuration/beans
+Registered blueprint namespace handler for http://cxf.apache.org/configuration/parameterized-types
+Registered blueprint namespace handler for http://cxf.apache.org/configuration/security
+Registered blueprint namespace handler for http://schemas.xmlsoap.org/wsdl/
+Registered blueprint namespace handler for http://www.w3.org/2005/08/addressing
+Registered blueprint namespace handler for http://schemas.xmlsoap.org/ws/2004/08/addressing
+Registered blueprint namespace handler for http://cxf.apache.org/transports/http/configuration
+Registered blueprint namespace handler for http://cxf.apache.org/blueprint/jaxws
+Registered blueprint namespace handler for http://cxf.apache.org/blueprint/simple
+Registered blueprint namespace handler for http://cxf.apache.org/ws/addressing
+Registered blueprint namespace handler for http://cxf.apache.org/policy
+Registered blueprint namespace handler for http://www.w3.org/ns/ws-policy
+Registered blueprint namespace handler for http://www.w3.org/2006/07/ws-policy
+Registered blueprint namespace handler for http://schemas.xmlsoap.org/ws/2004/09/policy
+Registered blueprint namespace handler for http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd
+Registered blueprint namespace handler for http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd
+Registered blueprint namespace handler for http://www.w3.org/2000/09/xmldsig#
+Registered blueprint namespace handler for http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702
+Registered blueprint namespace handler for http://cxf.apache.org/blueprint/bindings/soap
+No quiesce support is available, so blueprint components will not participate in quiesce operations
+Bundle org.redhat.integration.getCustomer is waiting for namespace handlers [http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.0.0, http://camel.apache.org/schema/blueprint/cxf, http://camel.apache.org/schema/blueprint]
+Bundle org.redhat.integration.getCustomer is waiting for namespace handlers [http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.0.0, http://camel.apache.org/schema/blueprint/cxf]
+Bundle org.redhat.integration.getCustomer is waiting for namespace handlers [http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.0.0]
+********************************************************************************
+Testing: doTest(BlueprintUnitTest)
+********************************************************************************
+Skipping starting CamelContext as system property skipStartingCamelContext is set to be true.
+Apache Camel 2.15.1.redhat-620133 (CamelContext: camel-2) is starting
+JMX is enabled
+Adviced endpoint [cxf://bean:customerServiceEndpoint] with mock endpoint [mock:cxf:bean:customerServiceEndpoint]
+AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+StreamCaching in use with spool directory: /tmp/camel/camel-tmp-225c9657-d917-4672-852e-1af43e69fdc1 and rules: [Spool > 128K body size]
+Creating Service {urn:org.redhat.integration.cd.customer}integration.svc.Customer.BindingQSService from WSDL: wsdl/getCustomer_interface.wsdl
+Setting the server's publish address to be http://localhost:8058/getCustomer
+Initialized CXF Server: org.apache.cxf.endpoint.ServerImpl@1500e009 in Payload mode with allow streaming: true
+Creating Service {http://backendSystem/target/}CustomerServices from WSDL: wsdl/targetService.wsdl
+removing the interceptor org.apache.cxf.interceptor.ClientFaultConverter@a8a8b75
+Initialized CXF Client: org.apache.camel.component.cxf.CxfEndpoint$CamelCxfClientImpl@75b21c3b in Payload mode with allow streaming: true
+jetty-8.1.17.v20150415
+Started SelectChannelConnector@localhost:8058
+Route: main started and consuming from: Endpoint[cxf://bean:Fuse_getCustomerEndpoint]
+Total 1 routes, of which 1 is started.
+Apache Camel 2.15.1.redhat-620133 (CamelContext: camel-2) started in 0.835 seconds
+Creating Service {urn:org.redhat.integration.cd.customer}integration.svc.Customer.BindingQSService from WSDL: wsdl/getCustomer_interface.wsdl
+removing the interceptor org.apache.cxf.interceptor.ClientFaultConverter@5972d253
+Initialized CXF Client: org.apache.camel.component.cxf.CxfEndpoint$CamelCxfClientImpl@4fcc0416 in Payload mode with allow streaming: true
+Initialized CXF Client: org.apache.camel.component.cxf.CxfEndpoint$CamelCxfClientImpl@4fcc0416 in Payload mode with allow streaming: true
+Processing message ID-mthirion-remote-csb-51448-1466069576490-0-4
+STEP: VALIDATE REQUEST
+Created default XPathFactory com.sun.org.apache.xpath.internal.jaxp.XPathFactoryImpl@74ca947a
+STEP: MAP DATA (IN)
+STEP: CREATE BSYS REQUEST
+STEP: CALL CustomerService
+UTF-8
+Received from CustomerService :: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tar="http://backendSystem/target/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tar:getCustomerInfoResponse>
+      	<tar:name>Michael</tar:name>
+      	<tar:lastname>Thirion</tar:lastname>
+      	<tar:code>Architect</tar:code>
+      </tar:getCustomerInfoResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+STEP: TRANSFO RESPONSE
+Asserting: Endpoint[mock://cxf:bean:customerServiceEndpoint] is satisfied
+********************************************************************************
+Testing done: doTest(BlueprintUnitTest)
+Took: 1.425 seconds (1425 millis)
+********************************************************************************
+Apache Camel 2.15.1.redhat-620133 (CamelContext: camel-2) is shutting down
+Starting to graceful shutdown 1 routes (timeout 10 seconds)
+stopped o.e.j.s.h.ContextHandler{,null}
+Route: main shutdown complete, was consuming from: Endpoint[cxf://bean:Fuse_getCustomerEndpoint]
+Graceful shutdown of 1 routes completed in 0 seconds
+Apache Camel 2.15.1.redhat-620133 (CamelContext: camel-2) uptime 1.442 seconds
+Apache Camel 2.15.1.redhat-620133 (CamelContext: camel-2) is shutdown in 0.016 seconds
+Destroying BlueprintContainer for bundle BlueprintUnitTest
+Destroying BlueprintContainer for bundle org.redhat.integration.getCustomer
+Apache Camel 2.15.1.redhat-620133 (CamelContext: camel-1) is shutting down
+Apache Camel 2.15.1.redhat-620133 (CamelContext: camel-1) uptime not started
+Apache Camel 2.15.1.redhat-620133 (CamelContext: camel-1) is shutdown in 0.001 seconds
+Destroying BlueprintContainer for bundle org.apache.aries.blueprint
+Destroying BlueprintContainer for bundle org.apache.cxf.cxf-rt-features-clustering
+Destroying BlueprintContainer for bundle org.apache.camel.camel-cxf-transport
+Destroying BlueprintContainer for bundle org.apache.camel.camel-cxf
+Destroying BlueprintContainer for bundle org.apache.camel.camel-blueprint
+Removing the extensions for bundle 35
+Removing the extensions for bundle 36
+Removing the extensions for bundle 38
+Removing the extensions for bundle 39
+Removing the extensions for bundle 41
+Removing the extensions for bundle 42
+Removing the extensions for bundle 12
+Removing the extensions for bundle 22
+Removing the extensions for bundle 27
+Camel activator stopping
+Camel activator stopped
+Deleting work directory target/bundles/1466069574474
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.096 sec - in BlueprintUnitTest
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-bundle-plugin:2.3.7:bundle (default-bundle) @ getCustomer ---
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- soapui-maven-plugin:5.2.1:test (robustness-testing) @ getCustomer ---
+2016-06-16 11:32:59,256 [main] WARN  com.eviware.soapui.SoapUI - Could not find jfxrt.jar. Internal browser will be disabled.
+SoapUI 5.2.1 Maven2 TestCase Runner
+11:32:59,433 WARN  [SoapUI] Missing folder [/redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/ext] for external libraries
+11:32:59,738 INFO  [DefaultSoapUICore] initialized soapui-settings from [/home/mthirion/soapui-settings.xml]
+11:33:00,097 INFO  [PluginManager] 0 plugins loaded in 2 ms
+11:33:00,097 INFO  [DefaultSoapUICore] All plugins loaded
+11:33:00,369 INFO  [SoapUI] File [/redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/src/test/resources/soapui/getCustomer-soapui-project.xml] does not exist, trying URL instead
+11:33:00,369 ERROR [SoapUI] An error occurred [no protocol: src/test/resources/soapui/getCustomer-soapui-project.xml], see error log for details
+java.net.MalformedURLException: no protocol: src/test/resources/soapui/getCustomer-soapui-project.xml
+	at java.net.URL.<init>(URL.java:586)
+	at java.net.URL.<init>(URL.java:483)
+	at java.net.URL.<init>(URL.java:432)
+	at com.eviware.soapui.impl.wsdl.WsdlProject.<init>(WsdlProject.java:234)
+	at com.eviware.soapui.impl.wsdl.WsdlProjectFactory.createNew(WsdlProjectFactory.java:41)
+	at com.eviware.soapui.impl.wsdl.WsdlProjectFactory.createNew(WsdlProjectFactory.java:28)
+	at com.eviware.soapui.tools.SoapUITestCaseRunner.runRunner(SoapUITestCaseRunner.java:341)
+	at com.eviware.soapui.tools.AbstractSoapUIRunner.run(AbstractSoapUIRunner.java:204)
+	at com.eviware.soapui.maven2.TestMojo.execute(TestMojo.java:117)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:134)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:207)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:307)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:193)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:106)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:863)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] java.lang.Exception: Failed to load SoapUI project file [src/test/resources/soapui/getCustomer-soapui-project.xml]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 9.155 s
+[INFO] Finished at: 2016-06-16T11:33:00+02:00
+[INFO] Final Memory: 41M/361M
+[INFO] ------------------------------------------------------------------------
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] Failed to execute goal com.smartbear.soapui:soapui-maven-plugin:5.2.1:test (robustness-testing) on project getCustomer: SoapUI Test(s) failed: SoapUI Test(s) failed:
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] Failed to load SoapUI project file [src/test/resources/soapui/getCustomer-soapui-project.xml]
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] -> [Help 1]
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Build step 'Invoke top-level Maven targets' marked build as failure
+Finished: FAILURE

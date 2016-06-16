@@ -1,0 +1,33 @@
+Started by upstream project "[8mha:AAAApR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzhEgZJ/az8JP301BLn0uKS/NzUoviU1LKS1OISfQC+TfKkzgAAAA==[0mgetCustomer_devtest" build number [8mha:AAAApR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBin9rPwk/fTUEufS4pL83NSi+JTUspLU4hJ9CwAE7MRtzwAAAA==[0m8
+originally caused by:
+ Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+ Started by upstream project "[8mha:AAAAxh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz+EgYr/WRTw6QkozQTXYPEZCNdEwtjc93EtBQL3URT81SDJOMkUwNLC/2s/CT99NQS59Likvzc1KL4lNQyfQB3KMkM7wAAAA==[0mgetCustomer_dev" build number [8mha:AAAAyB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgYb/WRTw6QkozQTXYPEZCNdEwtjc93EtBQL3URT81SDJOMkUwNLC/2s/CT99NQS59Likvzc1KL4lNQyfUNjALZ/vMbxAAAA[0m13
+ originally caused by:
+  Started by upstream project "[8mha:AAAAoB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgYR/az8JP301BLn0uKS/NzUonhnT30AKk/PdckAAAA=[0mgetCustomer_CI" build number [8mha:AAAAoB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBlH9rPwk/fTUEufS4pL83NSieGdPfTMAUncFM8oAAAA=[0m6
+  originally caused by:
+   Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Building in workspace /redhat/platforms/ci/jenkins/jobs/getCustomer_promote/workspace
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.fabric-cd.url https://github.com/mthirion/fabric-cd.git # timeout=10
+Fetching upstream changes from https://github.com/mthirion/fabric-cd.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username mthirion # timeout=10
+ > git config --local credential.helper store --file=/tmp/git7462198425083675970.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/mthirion/fabric-cd.git +refs/heads/*:refs/remotes/fabric-cd/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/fabric-cd/dev^{commit} # timeout=10
+ > git rev-parse refs/remotes/fabric-cd/fabric-cd/dev^{commit} # timeout=10
+Merging Revision 51546a43a9f526936283effe882c3fea7bf9a817 (refs/remotes/fabric-cd/dev) to fabric-cd/release, UserMergeOptions{mergeRemote='fabric-cd', mergeTarget='release', mergeStrategy='default', fastForwardMode='--ff'}
+ > git rev-parse fabric-cd/release^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f fabric-cd/release
+ > git merge --ff 51546a43a9f526936283effe882c3fea7bf9a817 # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 51546a43a9f526936283effe882c3fea7bf9a817
+ERROR: Branch not suitable for integration as it does not merge cleanly: Could not merge AnyObjectId[51546a43a9f526936283effe882c3fea7bf9a817]
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0m > git tag -l jenkins-getCustomer_promote-17 # timeout=10
+ > git tag -a -f -m Jenkins Build #17 jenkins-getCustomer_promote-17-FAILURE # timeout=10
+Warning: you have no plugins providing access control for builds, so falling back to legacy behavior of permitting any downstream builds to be triggered
+Finished: FAILURE

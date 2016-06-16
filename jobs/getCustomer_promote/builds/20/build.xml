@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.maven.MavenModuleSetBuild plugin="maven-plugin@2.7.1">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UpstreamCause>
+            <upstreamProject>getCustomer_devtest</upstreamProject>
+            <upstreamUrl>job/getCustomer_devtest/</upstreamUrl>
+            <upstreamBuild>8</upstreamBuild>
+            <upstreamCauses>
+              <hudson.model.Cause_-UserIdCause/>
+              <hudson.model.Cause_-UpstreamCause>
+                <upstreamProject>getCustomer_dev</upstreamProject>
+                <upstreamUrl>c51bb2f4-0ac2-4837-afd8-a57e0b3b5098/job/getCustomer_dev/</upstreamUrl>
+                <upstreamBuild>13</upstreamBuild>
+                <upstreamCauses>
+                  <hudson.model.Cause_-UpstreamCause>
+                    <upstreamProject>getCustomer_CI</upstreamProject>
+                    <upstreamUrl>job/getCustomer_CI/</upstreamUrl>
+                    <upstreamBuild>6</upstreamBuild>
+                    <upstreamCauses>
+                      <au.com.centrumsystems.hudson.plugin.buildpipeline.BuildPipelineView_-MyUserIdCause plugin="build-pipeline-plugin@1.5.3.1"/>
+                    </upstreamCauses>
+                  </hudson.model.Cause_-UpstreamCause>
+                </upstreamCauses>
+              </hudson.model.Cause_-UpstreamCause>
+            </upstreamCauses>
+          </hudson.model.Cause_-UpstreamCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <au.com.centrumsystems.hudson.plugin.buildpipeline.BuildPipelineView_-MyUserIdCause plugin="build-pipeline-plugin@1.5.3.1"/>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <hudson.plugins.git.util.BuildData plugin="git@2.4.4">
+      <buildsByBranchName>
+        <entry>
+          <string>fabric-cd/release</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@1.19.6">
+              <sha1>8660511455b0f5a939e628b6abf41551fae79b44</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/fabric-cd/dev</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision plugin="git-client@1.19.6">
+              <sha1>066c29660d72f1cf40b17bf7c3396790dd01ecc9</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>fabric-cd/release</name>
+                </hudson.plugins.git.Branch>
+                <hudson.plugins.git.Branch>
+                  <sha1>066c29660d72f1cf40b17bf7c3396790dd01ecc9</sha1>
+                  <name>fabric-cd/release</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </revision>
+            <hudsonBuildNumber>16</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+        <entry>
+          <string>fabric-cd/dev</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@1.19.6">
+              <sha1>8660511455b0f5a939e628b6abf41551fae79b44</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/fabric-cd/dev</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision plugin="git-client@1.19.6">
+              <sha1>8660511455b0f5a939e628b6abf41551fae79b44</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>fabric-cd/master</name>
+                </hudson.plugins.git.Branch>
+                <hudson.plugins.git.Branch>
+                  <sha1>8660511455b0f5a939e628b6abf41551fae79b44</sha1>
+                  <name>fabric-cd/dev</name>
+                </hudson.plugins.git.Branch>
+                <hudson.plugins.git.Branch>
+                  <sha1>d86c2a1a37d8f9d9619eee2ad9f585847fbeaa0e</sha1>
+                  <name>fabric-cd/release</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </revision>
+            <hudsonBuildNumber>13</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+        <entry>
+          <string>refs/remotes/fabric-cd/dev</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@1.19.6">
+              <sha1>51546a43a9f526936283effe882c3fea7bf9a817</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/fabric-cd/dev</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>20</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+        <entry>
+          <string>fabric-cd/master</string>
+          <hudson.plugins.git.util.Build reference="../../entry[2]/hudson.plugins.git.util.Build"/>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry[3]/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>https://github.com/mthirion/fabric-cd.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <hudson.plugins.git.GitTagAction plugin="git@2.4.4">
+      <tags class="hudson.util.CopyOnWriteMap$Tree">
+        <entry>
+          <string>refs/remotes/fabric-cd/dev</string>
+          <list/>
+        </entry>
+      </tags>
+      <ws>/redhat/platforms/ci/jenkins/jobs/getCustomer_promote/workspace</ws>
+    </hudson.plugins.git.GitTagAction>
+    <hudson.scm.SCMRevisionState_-None/>
+    <hudson.maven.reporters.MavenAggregatedArtifactRecord>
+      <records/>
+      <parent reference="../../.."/>
+    </hudson.maven.reporters.MavenAggregatedArtifactRecord>
+    <hudson.tasks.Fingerprinter_-FingerprintAction>
+      <record>
+        <entry>
+          <string>org.redhat.integration:getCustomer:pom.xml</string>
+          <string>8121d4a357b3c604cbeec3bdd28b5e3c</string>
+        </entry>
+      </record>
+    </hudson.tasks.Fingerprinter_-FingerprintAction>
+    <hudson.plugins.parameterizedtrigger.CapturedEnvironmentAction plugin="parameterized-trigger@2.30">
+      <env serialization="custom">
+        <unserializable-parents/>
+        <tree-map>
+          <default>
+            <comparator class="hudson.util.CaseInsensitiveComparator"/>
+          </default>
+          <int>44</int>
+          <string>BUILD_DISPLAY_NAME</string>
+          <string>#20</string>
+          <string>BUILD_ID</string>
+          <string>20</string>
+          <string>BUILD_NUMBER</string>
+          <string>20</string>
+          <string>BUILD_TAG</string>
+          <string>jenkins-getCustomer_promote-20</string>
+          <string>BUILD_URL</string>
+          <string>http://127.0.0.1:8080/job/getCustomer_promote/20/</string>
+          <string>CLASSPATH</string>
+          <string></string>
+          <string>EXECUTOR_NUMBER</string>
+          <string>1</string>
+          <string>GIT_AUTHOR_EMAIL</string>
+          <string>mthirion@redhat.com</string>
+          <string>GIT_AUTHOR_NAME</string>
+          <string>mthirion</string>
+          <string>GIT_BRANCH</string>
+          <string>fabric-cd/dev</string>
+          <string>GIT_COMMIT</string>
+          <string>51546a43a9f526936283effe882c3fea7bf9a817</string>
+          <string>GIT_COMMITTER_EMAIL</string>
+          <string>mthirion@redhat.com</string>
+          <string>GIT_COMMITTER_NAME</string>
+          <string>mthirion</string>
+          <string>GIT_PREVIOUS_COMMIT</string>
+          <string>51546a43a9f526936283effe882c3fea7bf9a817</string>
+          <string>GIT_PREVIOUS_SUCCESSFUL_COMMIT</string>
+          <string>51546a43a9f526936283effe882c3fea7bf9a817</string>
+          <string>GIT_URL</string>
+          <string>https://github.com/mthirion/fabric-cd.git</string>
+          <string>HOME</string>
+          <string>/home/mthirion</string>
+          <string>HUDSON_HOME</string>
+          <string>/redhat/platforms/ci/jenkins</string>
+          <string>HUDSON_SERVER_COOKIE</string>
+          <string>3ee34a5e5308af42</string>
+          <string>HUDSON_URL</string>
+          <string>http://127.0.0.1:8080/</string>
+          <string>JAVA_HOME</string>
+          <string>/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.65-2.b17.el7_1.x86_64</string>
+          <string>JENKINS_HOME</string>
+          <string>/redhat/platforms/ci/jenkins</string>
+          <string>JENKINS_SERVER_COOKIE</string>
+          <string>3ee34a5e5308af42</string>
+          <string>JENKINS_URL</string>
+          <string>http://127.0.0.1:8080/</string>
+          <string>JOB_NAME</string>
+          <string>getCustomer_promote</string>
+          <string>JOB_URL</string>
+          <string>http://127.0.0.1:8080/job/getCustomer_promote/</string>
+          <string>LANG</string>
+          <string>en_US.UTF-8</string>
+          <string>LOGNAME</string>
+          <string>mthirion</string>
+          <string>M2_HOME</string>
+          <string>/redhat/platforms/dev/maven</string>
+          <string>MAVEN_HOME</string>
+          <string>/redhat/platforms/dev/maven</string>
+          <string>NLSPATH</string>
+          <string>/usr/dt/lib/nls/msg/%L/%N.cat</string>
+          <string>NODE_LABELS</string>
+          <string>master</string>
+          <string>NODE_NAME</string>
+          <string>master</string>
+          <string>PATH</string>
+          <string>/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.65-2.b17.el7_1.x86_64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin</string>
+          <string>PATH+JDK</string>
+          <string>/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.65-2.b17.el7_1.x86_64/bin</string>
+          <string>PATH+MAVEN</string>
+          <string>/redhat/platforms/dev/maven/bin</string>
+          <string>POM_ARTIFACTID</string>
+          <string>getCustomer</string>
+          <string>POM_DISPLAYNAME</string>
+          <string>getCustomer</string>
+          <string>POM_GROUPID</string>
+          <string>org.redhat.integration</string>
+          <string>POM_PACKAGING</string>
+          <string>bundle</string>
+          <string>POM_VERSION</string>
+          <string>0.0.2-SNAPSHOT</string>
+          <string>USER</string>
+          <string>mthirion</string>
+          <string>WORKSPACE</string>
+          <string>/redhat/platforms/ci/jenkins/jobs/getCustomer_promote/workspace</string>
+          <string>XFILESEARCHPATH</string>
+          <string>/usr/dt/app-defaults/%L/Dt</string>
+        </tree-map>
+      </env>
+    </hudson.plugins.parameterizedtrigger.CapturedEnvironmentAction>
+  </actions>
+  <queueId>98</queueId>
+  <timestamp>1466082981079</timestamp>
+  <startTime>1466082981080</startTime>
+  <result>FAILURE</result>
+  <duration>7756</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/redhat/platforms/ci/jenkins/jobs/getCustomer_promote/workspace</workspace>
+  <hudsonVersion>2.0</hudsonVersion>
+  <scm class="hudson.plugins.git.GitChangeLogParser" plugin="git@2.4.4">
+    <authorOrCommitter>false</authorOrCommitter>
+  </scm>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+  <mavenVersionUsed>3.3.9</mavenVersionUsed>
+</hudson.maven.MavenModuleSetBuild>

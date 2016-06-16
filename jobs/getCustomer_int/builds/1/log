@@ -1,0 +1,49 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Building in workspace /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace
+Cloning the remote Git repository
+Cloning repository https://github.com/mthirion/fabric-cd.git
+ > git init /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace # timeout=10
+Fetching upstream changes from https://github.com/mthirion/fabric-cd.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username mthirion # timeout=10
+ > git config --local credential.helper store --file=/tmp/git739812429016414420.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/mthirion/fabric-cd.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git config remote.origin.url https://github.com/mthirion/fabric-cd.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/mthirion/fabric-cd.git # timeout=10
+Fetching upstream changes from https://github.com/mthirion/fabric-cd.git
+using .gitcredentials to set credentials
+ > git config --local credential.username mthirion # timeout=10
+ > git config --local credential.helper store --file=/tmp/git7362405054200848389.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/mthirion/fabric-cd.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/release^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/release^{commit} # timeout=10
+Checking out Revision d2282f6a6790d4f3a12afe1bb8d16d0d59d3cf0e (refs/remotes/origin/release)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d2282f6a6790d4f3a12afe1bb8d16d0d59d3cf0e
+First time build. Skipping changelog.
+[workspace] $ /redhat/platforms/dev/maven/bin/mvn -f queryCustomer/pom.xml -s /redhat/platforms/dev/maven/conf/settings.xml -gs /redhat/platforms/dev/maven/conf/settings.xml -DJOLOKIA_URL=http://localhost:8181:jolokia mvn --batch-mode -Dtag=${POM_ARTIFACTID}-${VERSION} release:prepare -DreleaseVersion=${VERSION} -DdevelopmentVersion=${POM_VERSION} -Dusername=${USERNAME} -Dpassword=${PASSWORD}
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Some problems were encountered while building the effective settings
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Unrecognised tag: 'repository' (position: START_TAG seen ...<!--\n\t     BPMS INTERNAL REPOSITORY\n\t-->\n        <repository>... @80:21)  @ /redhat/platforms/dev/maven/conf/settings.xml, line 80, column 21
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Unrecognised tag: 'repository' (position: START_TAG seen ...<!--\n\t     BPMS INTERNAL REPOSITORY\n\t-->\n        <repository>... @80:21)  @ /redhat/platforms/dev/maven/conf/settings.xml, line 80, column 21
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 
+[INFO] Scanning for projects...
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] [ERROR] Some problems were encountered while processing the POMs:
+[FATAL] Non-readable POM /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/queryCustomer/pom.xml: /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/queryCustomer/pom.xml (No such file or directory) @ 
+ @ 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] The build could not read 1 project -> [Help 1]
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR]   
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR]   The project  (/redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/queryCustomer/pom.xml) has 1 error
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR]     Non-readable POM /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/queryCustomer/pom.xml: /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/queryCustomer/pom.xml (No such file or directory)
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/ProjectBuildingException
+Build step 'Invoke top-level Maven targets' marked build as failure
+Finished: FAILURE

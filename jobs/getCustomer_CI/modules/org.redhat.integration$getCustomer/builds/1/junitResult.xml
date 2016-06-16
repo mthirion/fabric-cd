@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<result plugin="junit@1.11">
+  <suites>
+    <suite>
+      <file>/redhat/platforms/ci/jenkins/jobs/getCustomer_CI/workspace/getCustomer/target/surefire-reports/TEST-BlueprintUnitTest.xml</file>
+      <name>BlueprintUnitTest</name>
+      <duration>3.693</duration>
+      <cases>
+        <case>
+          <duration>3.693</duration>
+          <className>BlueprintUnitTest</className>
+          <testName>doTest</testName>
+          <skipped>false</skipped>
+          <errorStackTrace>org.apache.cxf.interceptor.Fault: Could not start Jetty server on port 8,060: Address already in use
+	at org.apache.cxf.transport.http_jetty.JettyHTTPServerEngine.addServant(JettyHTTPServerEngine.java:428)
+	at org.apache.cxf.transport.http_jetty.JettyHTTPDestination.activate(JettyHTTPDestination.java:179)
+	at org.apache.cxf.transport.AbstractObservable.setMessageObserver(AbstractObservable.java:53)
+	at org.apache.cxf.binding.AbstractBindingFactory.addListener(AbstractBindingFactory.java:95)
+	at org.apache.cxf.binding.soap.SoapBindingFactory.addListener(SoapBindingFactory.java:895)
+	at org.apache.cxf.endpoint.ServerImpl.start(ServerImpl.java:123)
+	at org.apache.camel.component.cxf.CxfConsumer.doStart(CxfConsumer.java:279)
+	at org.apache.camel.support.ServiceSupport.start(ServiceSupport.java:61)
+	at org.apache.camel.impl.DefaultCamelContext.startService(DefaultCamelContext.java:2869)
+	at org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3163)
+	at org.apache.camel.impl.DefaultCamelContext.doStartRouteConsumers(DefaultCamelContext.java:3099)
+	at org.apache.camel.impl.DefaultCamelContext.safelyStartRouteServices(DefaultCamelContext.java:3029)
+	at org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRoutes(DefaultCamelContext.java:2797)
+	at org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:2653)
+	at org.apache.camel.impl.DefaultCamelContext.access$000(DefaultCamelContext.java:167)
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:2467)
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:2463)
+	at org.apache.camel.impl.DefaultCamelContext.doWithDefinedClassLoader(DefaultCamelContext.java:2486)
+	at org.apache.camel.impl.DefaultCamelContext.doStart(DefaultCamelContext.java:2463)
+	at org.apache.camel.support.ServiceSupport.start(ServiceSupport.java:61)
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2432)
+	at org.apache.camel.blueprint.BlueprintCamelContext.start(BlueprintCamelContext.java:180)
+	at org.apache.camel.test.blueprint.CamelBlueprintTestSupport.setUp(CamelBlueprintTestSupport.java:187)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+	at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:293)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.apache.cxf.transport.http_jetty.JettyHTTPServerEngine.addServant(JettyHTTPServerEngine.java:417)
+	at org.apache.cxf.transport.http_jetty.JettyHTTPDestination.activate(JettyHTTPDestination.java:179)
+	at org.apache.cxf.transport.AbstractObservable.setMessageObserver(AbstractObservable.java:53)
+	at org.apache.cxf.binding.AbstractBindingFactory.addListener(AbstractBindingFactory.java:95)
+	at org.apache.cxf.binding.soap.SoapBindingFactory.addListener(SoapBindingFactory.java:895)
+	at org.apache.cxf.endpoint.ServerImpl.start(ServerImpl.java:123)
+	at org.apache.camel.component.cxf.CxfConsumer.doStart(CxfConsumer.java:279)
+	at org.apache.camel.support.ServiceSupport.start(ServiceSupport.java:61)
+	at org.apache.camel.impl.DefaultCamelContext.startService(DefaultCamelContext.java:2869)
+	at org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3163)
+	at org.apache.camel.impl.DefaultCamelContext.doStartRouteConsumers(DefaultCamelContext.java:3099)
+	at org.apache.camel.impl.DefaultCamelContext.safelyStartRouteServices(DefaultCamelContext.java:3029)
+	at org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRoutes(DefaultCamelContext.java:2797)
+	at org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:2653)
+	at org.apache.camel.impl.DefaultCamelContext.access$000(DefaultCamelContext.java:167)
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:2467)
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:2463)
+	at org.apache.camel.impl.DefaultCamelContext.doWithDefinedClassLoader(DefaultCamelContext.java:2486)
+	at org.apache.camel.impl.DefaultCamelContext.doStart(DefaultCamelContext.java:2463)
+	at org.apache.camel.support.ServiceSupport.start(ServiceSupport.java:61)
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2432)
+	at org.apache.camel.blueprint.BlueprintCamelContext.start(BlueprintCamelContext.java:180)
+	at org.apache.camel.test.blueprint.CamelBlueprintTestSupport.setUp(CamelBlueprintTestSupport.java:187)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+</errorStackTrace>
+          <errorDetails>Could not start Jetty server on port 8,060: Address already in use</errorDetails>
+          <stdout>Using Blueprint XML file: /redhat/platforms/ci/jenkins/jobs/getCustomer_CI/workspace/getCustomer/target/classes/OSGI-INF/blueprint/blueprint.xml
+Copy thread finished.
+Camel activator starting
+Camel activator started
+Registered blueprint namespace handler for http://cxf.apache.org/blueprint/jaxrs
+Registered blueprint namespace handler for http://cxf.apache.org/blueprint/jaxrs-client
+Registered blueprint namespace handler for http://cxf.apache.org/clustering
+Registered blueprint namespace handler for http://cxf.apache.org/transports/http-jetty/configuration
+Adding the extensions from bundle org.apache.camel.camel-cxf-transport (11) [org.apache.camel.component.cxf.transport.CamelTransportFactory]
+Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-http-jetty (21) [org.apache.cxf.transport.http_jetty.JettyDestinationFactory, org.apache.cxf.transport.http_jetty.JettyHTTPServerEngineFactory, org.apache.cxf.transport.http.ContinuationProviderFactory]
+Adding the extensions from bundle org.apache.cxf.cxf-rt-transports-http (26) [org.apache.cxf.transport.http.HTTPTransportFactory, org.apache.cxf.transport.http.HTTPWSDLExtensionLoader, org.apache.cxf.transport.http.policy.HTTPClientAssertionBuilder, org.apache.cxf.transport.http.policy.HTTPServerAssertionBuilder, org.apache.cxf.transport.http.policy.NoOpPolicyInterceptorProvider]
+Adding the extensions from bundle org.apache.cxf.cxf-rt-frontend-jaxws (34) [org.apache.cxf.jaxws.context.WebServiceContextResourceResolver]
+Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-xml (35) [org.apache.cxf.binding.xml.XMLBindingFactory, org.apache.cxf.binding.xml.wsdl11.XMLWSDLExtensionLoader]
+Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-addr (37) [org.apache.cxf.ws.addressing.policy.AddressingAssertionBuilder, org.apache.cxf.ws.addressing.policy.UsingAddressingAssertionBuilder, org.apache.cxf.ws.addressing.policy.AddressingPolicyInterceptorProvider, org.apache.cxf.ws.addressing.impl.AddressingWSDLExtensionLoader, org.apache.cxf.ws.addressing.WSAddressingFeature$WSAddressingFeatureApplier, org.apache.cxf.ws.addressing.MAPAggregator$MAPAggregatorLoader]
+Adding the extensions from bundle org.apache.cxf.cxf-rt-ws-policy (38) [org.apache.cxf.ws.policy.PolicyEngine, org.apache.cxf.policy.PolicyDataEngine, org.apache.cxf.ws.policy.AssertionBuilderRegistry, org.apache.cxf.ws.policy.PolicyInterceptorProviderRegistry, org.apache.cxf.ws.policy.PolicyBuilder, org.apache.cxf.ws.policy.PolicyAnnotationListener, org.apache.cxf.ws.policy.attachment.ServiceModelPolicyProvider, org.apache.cxf.ws.policy.attachment.external.DomainExpressionBuilderRegistry, org.apache.cxf.ws.policy.attachment.external.EndpointReferenceDomainExpressionBuilder, org.apache.cxf.ws.policy.attachment.external.URIDomainExpressionBuilder, org.apache.cxf.ws.policy.attachment.wsdl11.Wsdl11AttachmentPolicyProvider, org.apache.cxf.ws.policy.mtom.MTOMAssertionBuilder, org.apache.cxf.ws.policy.mtom.MTOMPolicyInterceptorProvider]
+Adding the extensions from bundle org.apache.cxf.cxf-rt-bindings-soap (40) [org.apache.cxf.binding.soap.SoapBindingFactory, org.apache.cxf.binding.soap.SoapTransportFactory]
+Adding the extensions from bundle org.apache.cxf.cxf-rt-wsdl (41) [org.apache.cxf.wsdl.WSDLManager]
+Registered blueprint namespace handler for http://cxf.apache.org/blueprint/core
+Registered blueprint namespace handler for http://cxf.apache.org/configuration/beans
+Registered blueprint namespace handler for http://cxf.apache.org/configuration/parameterized-types
+Registered blueprint namespace handler for http://cxf.apache.org/configuration/security
+Registered blueprint namespace handler for http://schemas.xmlsoap.org/wsdl/
+Registered blueprint namespace handler for http://www.w3.org/2005/08/addressing
+Registered blueprint namespace handler for http://schemas.xmlsoap.org/ws/2004/08/addressing
+Registered blueprint namespace handler for http://cxf.apache.org/transports/http/configuration
+Registered blueprint namespace handler for http://cxf.apache.org/blueprint/jaxws
+Registered blueprint namespace handler for http://cxf.apache.org/blueprint/simple
+Registered blueprint namespace handler for http://cxf.apache.org/ws/addressing
+Registered blueprint namespace handler for http://cxf.apache.org/policy
+Registered blueprint namespace handler for http://www.w3.org/ns/ws-policy
+Registered blueprint namespace handler for http://www.w3.org/2006/07/ws-policy
+Registered blueprint namespace handler for http://schemas.xmlsoap.org/ws/2004/09/policy
+Registered blueprint namespace handler for http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd
+Registered blueprint namespace handler for http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd
+Registered blueprint namespace handler for http://www.w3.org/2000/09/xmldsig#
+Registered blueprint namespace handler for http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702
+Registered blueprint namespace handler for http://cxf.apache.org/blueprint/bindings/soap
+No quiesce support is available, so blueprint components will not participate in quiesce operations
+********************************************************************************
+Testing: doTest(BlueprintUnitTest)
+********************************************************************************
+Skipping starting CamelContext as system property skipStartingCamelContext is set to be true.
+Apache Camel 2.15.1.redhat-620133 (CamelContext: camel-1) is starting
+JMX is enabled
+Adviced endpoint [cxf://bean:customerServiceEndpoint] with mock endpoint [mock:cxf:bean:customerServiceEndpoint]
+AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+StreamCaching in use with spool directory: /tmp/camel/camel-tmp-94d452d9-7842-4ffa-ad7f-0dd29350e85e and rules: [Spool &gt; 128K body size]
+Creating Service {urn:org.redhat.integration.cd.customer}integration.svc.Customer.BindingQSService from WSDL: wsdl/getCustomer_interface.wsdl
+Setting the server&apos;s publish address to be http://localhost:8060/getCustomer
+Initialized CXF Server: org.apache.cxf.endpoint.ServerImpl@1c758545 in Payload mode with allow streaming: true
+Creating Service {http://backendSystem/target/}CustomerServices from WSDL: wsdl/targetService.wsdl
+removing the interceptor org.apache.cxf.interceptor.ClientFaultConverter@11b377c5
+Initialized CXF Client: org.apache.camel.component.cxf.CxfEndpoint$CamelCxfClientImpl@7bca6fac in Payload mode with allow streaming: true
+jetty-8.1.17.v20150415
+FAILED SelectChannelConnector@localhost:8060: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)[:1.8.0_65]
+	at sun.nio.ch.Net.bind(Net.java:433)[:1.8.0_65]
+	at sun.nio.ch.Net.bind(Net.java:425)[:1.8.0_65]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)[:1.8.0_65]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)[:1.8.0_65]
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)[jetty-server-8.1.17.v20150415.jar:8.1.17.v20150415]
+	at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)[jetty-server-8.1.17.v20150415.jar:8.1.17.v20150415]
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)[jetty-server-8.1.17.v20150415.jar:8.1.17.v20150415]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)[jetty-util-8.1.17.v20150415.jar:8.1.17.v20150415]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:293)[jetty-server-8.1.17.v20150415.jar:8.1.17.v20150415]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)[jetty-util-8.1.17.v20150415.jar:8.1.17.v20150415]
+	at org.apache.cxf.transport.http_jetty.JettyHTTPServerEngine.addServant(JettyHTTPServerEngine.java:417)[cxf-rt-transports-http-jetty-3.0.4.redhat-620133.jar:3.0.4.redhat-620133]
+	at org.apache.cxf.transport.http_jetty.JettyHTTPDestination.activate(JettyHTTPDestination.java:179)[cxf-rt-transports-http-jetty-3.0.4.redhat-620133.jar:3.0.4.redhat-620133]
+	at org.apache.cxf.transport.AbstractObservable.setMessageObserver(AbstractObservable.java:53)[cxf-core-3.0.4.redhat-620133.jar:3.0.4.redhat-620133]
+	at org.apache.cxf.binding.AbstractBindingFactory.addListener(AbstractBindingFactory.java:95)[cxf-core-3.0.4.redhat-620133.jar:3.0.4.redhat-620133]
+	at org.apache.cxf.binding.soap.SoapBindingFactory.addListener(SoapBindingFactory.java:895)[cxf-rt-bindings-soap-3.0.4.redhat-620133.jar:3.0.4.redhat-620133]
+	at org.apache.cxf.endpoint.ServerImpl.start(ServerImpl.java:123)[cxf-core-3.0.4.redhat-620133.jar:3.0.4.redhat-620133]
+	at org.apache.camel.component.cxf.CxfConsumer.doStart(CxfConsumer.java:279)[camel-cxf-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.support.ServiceSupport.start(ServiceSupport.java:61)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext.startService(DefaultCamelContext.java:2869)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3163)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext.doStartRouteConsumers(DefaultCamelContext.java:3099)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext.safelyStartRouteServices(DefaultCamelContext.java:3029)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRoutes(DefaultCamelContext.java:2797)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:2653)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext.access$000(DefaultCamelContext.java:167)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:2467)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:2463)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext.doWithDefinedClassLoader(DefaultCamelContext.java:2486)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext.doStart(DefaultCamelContext.java:2463)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.support.ServiceSupport.start(ServiceSupport.java:61)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2432)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.blueprint.BlueprintCamelContext.start(BlueprintCamelContext.java:180)[camel-blueprint-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.test.blueprint.CamelBlueprintTestSupport.setUp(CamelBlueprintTestSupport.java:187)[camel-test-blueprint-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_65]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[:1.8.0_65]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[:1.8.0_65]
+	at java.lang.reflect.Method.invoke(Method.java:497)[:1.8.0_65]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)[junit-4.11.jar:]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)[junit-4.11.jar:]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)[junit-4.11.jar:]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)[junit-4.11.jar:]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)[junit-4.11.jar:]
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)[junit-4.11.jar:]
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)[junit-4.11.jar:]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)[junit-4.11.jar:]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)[junit-4.11.jar:]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)[junit-4.11.jar:]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)[junit-4.11.jar:]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)[junit-4.11.jar:]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)[junit-4.11.jar:]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)[junit-4.11.jar:]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)[junit-4.11.jar:]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)[junit-4.11.jar:]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)[junit-4.11.jar:]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)[surefire-junit4-2.15.jar:2.15]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)[surefire-junit4-2.15.jar:2.15]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)[surefire-junit4-2.15.jar:2.15]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)[surefire-booter-2.15.jar:2.15]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)[surefire-booter-2.15.jar:2.15]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)[surefire-booter-2.15.jar:2.15]
+FAILED org.eclipse.jetty.server.Server@61a1ea2c: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)[:1.8.0_65]
+	at sun.nio.ch.Net.bind(Net.java:433)[:1.8.0_65]
+	at sun.nio.ch.Net.bind(Net.java:425)[:1.8.0_65]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)[:1.8.0_65]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)[:1.8.0_65]
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)[jetty-server-8.1.17.v20150415.jar:8.1.17.v20150415]
+	at org.eclipse.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)[jetty-server-8.1.17.v20150415.jar:8.1.17.v20150415]
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)[jetty-server-8.1.17.v20150415.jar:8.1.17.v20150415]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)[jetty-util-8.1.17.v20150415.jar:8.1.17.v20150415]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:293)[jetty-server-8.1.17.v20150415.jar:8.1.17.v20150415]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)[jetty-util-8.1.17.v20150415.jar:8.1.17.v20150415]
+	at org.apache.cxf.transport.http_jetty.JettyHTTPServerEngine.addServant(JettyHTTPServerEngine.java:417)[cxf-rt-transports-http-jetty-3.0.4.redhat-620133.jar:3.0.4.redhat-620133]
+	at org.apache.cxf.transport.http_jetty.JettyHTTPDestination.activate(JettyHTTPDestination.java:179)[cxf-rt-transports-http-jetty-3.0.4.redhat-620133.jar:3.0.4.redhat-620133]
+	at org.apache.cxf.transport.AbstractObservable.setMessageObserver(AbstractObservable.java:53)[cxf-core-3.0.4.redhat-620133.jar:3.0.4.redhat-620133]
+	at org.apache.cxf.binding.AbstractBindingFactory.addListener(AbstractBindingFactory.java:95)[cxf-core-3.0.4.redhat-620133.jar:3.0.4.redhat-620133]
+	at org.apache.cxf.binding.soap.SoapBindingFactory.addListener(SoapBindingFactory.java:895)[cxf-rt-bindings-soap-3.0.4.redhat-620133.jar:3.0.4.redhat-620133]
+	at org.apache.cxf.endpoint.ServerImpl.start(ServerImpl.java:123)[cxf-core-3.0.4.redhat-620133.jar:3.0.4.redhat-620133]
+	at org.apache.camel.component.cxf.CxfConsumer.doStart(CxfConsumer.java:279)[camel-cxf-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.support.ServiceSupport.start(ServiceSupport.java:61)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext.startService(DefaultCamelContext.java:2869)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRouteConsumers(DefaultCamelContext.java:3163)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext.doStartRouteConsumers(DefaultCamelContext.java:3099)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext.safelyStartRouteServices(DefaultCamelContext.java:3029)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext.doStartOrResumeRoutes(DefaultCamelContext.java:2797)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext.doStartCamel(DefaultCamelContext.java:2653)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext.access$000(DefaultCamelContext.java:167)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:2467)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext$2.call(DefaultCamelContext.java:2463)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext.doWithDefinedClassLoader(DefaultCamelContext.java:2486)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext.doStart(DefaultCamelContext.java:2463)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.support.ServiceSupport.start(ServiceSupport.java:61)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.impl.DefaultCamelContext.start(DefaultCamelContext.java:2432)[camel-core-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.blueprint.BlueprintCamelContext.start(BlueprintCamelContext.java:180)[camel-blueprint-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at org.apache.camel.test.blueprint.CamelBlueprintTestSupport.setUp(CamelBlueprintTestSupport.java:187)[camel-test-blueprint-2.15.1.redhat-620133.jar:2.15.1.redhat-620133]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[:1.8.0_65]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[:1.8.0_65]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[:1.8.0_65]
+	at java.lang.reflect.Method.invoke(Method.java:497)[:1.8.0_65]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)[junit-4.11.jar:]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)[junit-4.11.jar:]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)[junit-4.11.jar:]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)[junit-4.11.jar:]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)[junit-4.11.jar:]
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)[junit-4.11.jar:]
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)[junit-4.11.jar:]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)[junit-4.11.jar:]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)[junit-4.11.jar:]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)[junit-4.11.jar:]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)[junit-4.11.jar:]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)[junit-4.11.jar:]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)[junit-4.11.jar:]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)[junit-4.11.jar:]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)[junit-4.11.jar:]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)[junit-4.11.jar:]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)[junit-4.11.jar:]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)[surefire-junit4-2.15.jar:2.15]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)[surefire-junit4-2.15.jar:2.15]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)[surefire-junit4-2.15.jar:2.15]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)[surefire-booter-2.15.jar:2.15]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)[surefire-booter-2.15.jar:2.15]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)[surefire-booter-2.15.jar:2.15]
+Could not start Jetty server on port 8,060: Address already in use
+Apache Camel 2.15.1.redhat-620133 (CamelContext: camel-1) is shutting down
+Apache Camel 2.15.1.redhat-620133 (CamelContext: camel-1) uptime 1.181 seconds
+Apache Camel 2.15.1.redhat-620133 (CamelContext: camel-1) is shutdown in 0.007 seconds
+********************************************************************************
+Testing done: doTest(BlueprintUnitTest)
+Took: 1.182 seconds (1182 millis)
+********************************************************************************
+Destroying BlueprintContainer for bundle BlueprintUnitTest
+Destroying BlueprintContainer for bundle org.apache.aries.blueprint
+Destroying BlueprintContainer for bundle org.apache.cxf.cxf-rt-features-clustering
+Destroying BlueprintContainer for bundle org.apache.camel.camel-cxf-transport
+Destroying BlueprintContainer for bundle org.apache.camel.camel-cxf
+Destroying BlueprintContainer for bundle org.apache.camel.camel-blueprint
+Removing the extensions for bundle 34
+Removing the extensions for bundle 35
+Removing the extensions for bundle 37
+Removing the extensions for bundle 38
+Removing the extensions for bundle 40
+Removing the extensions for bundle 41
+Removing the extensions for bundle 11
+Removing the extensions for bundle 21
+Removing the extensions for bundle 26
+Camel activator stopping
+Camel activator stopped
+Deleting work directory target/bundles/1465977209373
+</stdout>
+          <failedSince>1</failedSince>
+        </case>
+      </cases>
+    </suite>
+  </suites>
+  <duration>3.693</duration>
+  <keepLongStdio>false</keepLongStdio>
+</result>

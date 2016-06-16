@@ -1,0 +1,11 @@
+commit 066c29660d72f1cf40b17bf7c3396790dd01ecc9
+tree e10aa3f40b7c646116aa7dc755d7cf944251b67c
+parent 8660511455b0f5a939e628b6abf41551fae79b44
+author mthirion <mthirion@redhat.com> 2016-06-15 18:20:17 +0200
+committer mthirion <mthirion@redhat.com> 2016-06-15 18:20:17 +0200
+
+    [maven-release-plugin] prepare release getCustomer-0.0.1
+
+
+
+:100644 100644 21a254370897c566f680c332214dcce425dfaa4b ac8146bce56a7c69335e6492309323d2376706c7 M	getCustomer/pom.xml

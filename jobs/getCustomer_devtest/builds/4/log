@@ -1,0 +1,383 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Building in workspace /redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/mthirion/fabric-cd.git # timeout=10
+Fetching upstream changes from https://github.com/mthirion/fabric-cd.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username mthirion # timeout=10
+ > git config --local credential.helper store --file=/tmp/git4882071934785720586.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/mthirion/fabric-cd.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/dev^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/dev^{commit} # timeout=10
+Checking out Revision 7f1504393b3e13b7c466b09c5c1b299ea4f48e92 (refs/remotes/origin/dev)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 7f1504393b3e13b7c466b09c5c1b299ea4f48e92
+ > git rev-list 7f1504393b3e13b7c466b09c5c1b299ea4f48e92 # timeout=10
+[workspace] $ /bin/sh -xe /tmp/hudson7582469430265619235.sh
++ echo 'temporary copying soapui files into jenkins workspace'
+temporary copying soapui files into jenkins workspace
++ mkdir -p /redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace/src/test/resources/soapui
++ cp /redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace/getCustomer/src/test/resources/soapui/getCustomer-soapui-project.xml /redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace/getCustomer/src/test/resources/soapui/soapui-settings.xml /redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace/getCustomer/src/test/resources/soapui/targetService-soapui-project.xml /redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace/src/test/resources/soapui/
+[workspace] $ /bin/sh -xe /tmp/hudson1714978766303513578.sh
++ echo 'starting mock service'
+starting mock service
++ echo 0
++ cat /redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace/src/test/mock.pid
++ /redhat/platforms/test/soapui/bin/mockservicerunner.sh -m CustomerServicesMock /redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace/targetService-soapui-project.xml
+0
++ ps -ef
+++ cat /redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace/src/test/mock.pid
++ grep 0
+root         1     0  0 Jun13 ?        00:00:06 /usr/lib/systemd/systemd --switched-root --system --deserialize 24
+root         2     0  0 Jun13 ?        00:00:00 [kthreadd]
+root         3     2  0 Jun13 ?        00:00:00 [ksoftirqd/0]
+root         5     2  0 Jun13 ?        00:00:00 [kworker/0:0H]
+root         7     2  0 Jun13 ?        00:00:01 [migration/0]
+root         8     2  0 Jun13 ?        00:00:00 [rcu_bh]
+root         9     2  0 Jun13 ?        00:00:00 [rcuob/0]
+root        10     2  0 Jun13 ?        00:00:00 [rcuob/1]
+root        11     2  0 Jun13 ?        00:00:00 [rcuob/2]
+root        12     2  0 Jun13 ?        00:00:00 [rcuob/3]
+root        13     2  0 Jun13 ?        00:00:00 [rcuob/4]
+root        14     2  0 Jun13 ?        00:00:00 [rcuob/5]
+root        15     2  0 Jun13 ?        00:00:00 [rcuob/6]
+root        16     2  0 Jun13 ?        00:00:00 [rcuob/7]
+root        17     2  0 Jun13 ?        00:00:22 [rcu_sched]
+root        18     2  0 Jun13 ?        00:00:08 [rcuos/0]
+root        19     2  0 Jun13 ?        00:00:06 [rcuos/1]
+root        20     2  0 Jun13 ?        00:00:09 [rcuos/2]
+root        21     2  0 Jun13 ?        00:00:06 [rcuos/3]
+root        22     2  0 Jun13 ?        00:00:00 [rcuos/4]
+root        23     2  0 Jun13 ?        00:00:00 [rcuos/5]
+root        24     2  0 Jun13 ?        00:00:00 [rcuos/6]
+root        25     2  0 Jun13 ?        00:00:00 [rcuos/7]
+root        28     2  0 Jun13 ?        00:00:00 [migration/1]
+root        29     2  0 Jun13 ?        00:00:00 [ksoftirqd/1]
+root        31     2  0 Jun13 ?        00:00:00 [kworker/1:0H]
+root        33     2  0 Jun13 ?        00:00:00 [migration/2]
+root        34     2  0 Jun13 ?        00:00:00 [ksoftirqd/2]
+root        36     2  0 Jun13 ?        00:00:00 [kworker/2:0H]
+root        38     2  0 Jun13 ?        00:00:00 [migration/3]
+root        39     2  0 Jun13 ?        00:00:00 [ksoftirqd/3]
+root        41     2  0 Jun13 ?        00:00:00 [kworker/3:0H]
+root        42     2  0 Jun13 ?        00:00:00 [khelper]
+root        43     2  0 Jun13 ?        00:00:00 [kdevtmpfs]
+root        44     2  0 Jun13 ?        00:00:00 [netns]
+root        45     2  0 Jun13 ?        00:00:00 [perf]
+root        46     2  0 Jun13 ?        00:00:00 [writeback]
+root        47     2  0 Jun13 ?        00:00:00 [kintegrityd]
+root        48     2  0 Jun13 ?        00:00:00 [bioset]
+root        49     2  0 Jun13 ?        00:00:00 [kblockd]
+root        50     2  0 Jun13 ?        00:00:00 [khubd]
+root        51     2  0 Jun13 ?        00:00:00 [md]
+root        54     2  0 Jun13 ?        00:00:00 [khungtaskd]
+root        55     2  0 Jun13 ?        00:00:00 [kswapd0]
+root        56     2  0 Jun13 ?        00:00:00 [ksmd]
+root        57     2  0 Jun13 ?        00:00:03 [khugepaged]
+root        58     2  0 Jun13 ?        00:00:00 [fsnotify_mark]
+root        59     2  0 Jun13 ?        00:00:00 [crypto]
+root        68     2  0 Jun13 ?        00:00:00 [kthrotld]
+root        71     2  0 Jun13 ?        00:00:00 [kmpath_rdacd]
+root        73     2  0 Jun13 ?        00:00:00 [kpsmoused]
+root        75     2  0 Jun13 ?        00:00:00 [ipv6_addrconf]
+root        95     2  0 Jun13 ?        00:00:00 [deferwq]
+root       119     2  0 Jun13 ?        00:00:00 [kauditd]
+root       308     2  0 Jun13 ?        00:00:00 [events_power_ef]
+root       318     2  0 Jun13 ?        00:00:00 [ata_sff]
+root       357     2  0 Jun13 ?        00:00:00 [scsi_eh_0]
+root       358     2  0 Jun13 ?        00:00:00 [scsi_tmf_0]
+root       359     2  0 Jun13 ?        00:00:00 [scsi_eh_1]
+root       360     2  0 Jun13 ?        00:00:00 [scsi_tmf_1]
+root       361     2  0 Jun13 ?        00:00:00 [scsi_eh_2]
+root       362     2  0 Jun13 ?        00:00:00 [scsi_tmf_2]
+root       367     2  0 Jun13 ?        00:00:00 [kworker/1:1H]
+root       374     2  0 Jun13 ?        00:00:01 [kworker/0:1H]
+root       512     2  0 Jun13 ?        00:00:00 [kdmflush]
+root       515     2  0 Jun13 ?        00:00:00 [kworker/3:1H]
+root       516     2  0 Jun13 ?        00:00:00 [bioset]
+root       517     2  0 Jun13 ?        00:00:00 [kcryptd_io]
+root       518     2  0 Jun13 ?        00:00:00 [kcryptd]
+root       519     2  0 Jun13 ?        00:00:03 [dmcrypt_write]
+root       520     2  0 Jun13 ?        00:00:00 [bioset]
+root       522     2  0 Jun13 ?        00:00:00 [kworker/2:1H]
+root       591     2  0 Jun13 ?        00:00:00 [kdmflush]
+root       592     2  0 Jun13 ?        00:00:00 [bioset]
+root       612     2  0 Jun13 ?        00:00:00 [jbd2/dm-1-8]
+root       613     2  0 Jun13 ?        00:00:00 [ext4-rsv-conver]
+root       614     2  0 Jun13 ?        00:00:00 [ext4-unrsv-conv]
+root       709     1  0 Jun13 ?        00:00:06 /usr/lib/systemd/systemd-journald
+root       719     1  0 Jun13 ?        00:00:00 /usr/sbin/lvmetad -f
+root       725     1  0 Jun13 ?        00:00:00 /usr/lib/systemd/systemd-udevd
+root       757     2  0 Jun13 ?        00:00:00 [ktpacpid]
+root       781     2  0 Jun13 ?        00:00:00 [kmemstick]
+root       788     2  0 Jun13 ?        00:00:00 [cfg80211]
+root       795     2  0 Jun13 ?        00:01:39 [irq/64-iwlwifi]
+root       812     2  0 Jun13 ?        00:00:00 [hd-audio1]
+root       814     2  0 Jun13 ?        00:00:00 [kvm-irqfd-clean]
+root       833     2  0 Jun13 ?        00:00:00 [jbd2/sda1-8]
+root       834     2  0 Jun13 ?        00:00:00 [ext4-rsv-conver]
+root       835     2  0 Jun13 ?        00:00:00 [ext4-unrsv-conv]
+root       849     2  0 Jun13 ?        00:00:00 [kdmflush]
+root       850     2  0 Jun13 ?        00:00:00 [bioset]
+root       853     2  0 Jun13 ?        00:00:00 [kdmflush]
+root       854     2  0 Jun13 ?        00:00:00 [bioset]
+root       857     2  0 Jun13 ?        00:00:00 [kdmflush]
+root       859     2  0 Jun13 ?        00:00:00 [bioset]
+root       969     2  0 Jun13 ?        00:00:01 [jbd2/dm-2-8]
+root       970     2  0 Jun13 ?        00:00:00 [ext4-rsv-conver]
+root       971     2  0 Jun13 ?        00:00:00 [ext4-unrsv-conv]
+root       973     2  0 Jun13 ?        00:00:00 [jbd2/dm-4-8]
+root       974     2  0 Jun13 ?        00:00:00 [ext4-rsv-conver]
+root       975     2  0 Jun13 ?        00:00:00 [ext4-unrsv-conv]
+root       990     1  0 Jun13 ?        00:00:00 /sbin/auditd -n
+root       998   990  0 Jun13 ?        00:00:00 /sbin/audispd
+root      1000   998  0 Jun13 ?        00:00:00 /usr/sbin/sedispatch
+root      1014     1  0 Jun13 ?        00:00:00 /usr/sbin/alsactl -s -n 19 -c -E ALSA_CONFIG_PATH=/etc/alsa/alsactl.conf --initfile=/lib/alsa/init/00main rdaemon
+root      1018     1  0 Jun13 ?        00:00:04 /usr/bin/python -Es /usr/sbin/tuned -l -P
+root      1020     1  0 Jun13 ?        00:00:02 /usr/sbin/rsyslogd -n
+avahi     1021     1  0 Jun13 ?        00:00:00 avahi-daemon: running [mthirion.local]
+root      1024     1  0 Jun13 ?        00:00:03 /usr/sbin/irqbalance --foreground
+root      1025     1  0 Jun13 ?        00:00:00 /usr/sbin/ModemManager
+root      1026     1  0 Jun13 ?        00:00:00 /usr/sbin/abrtd -d -s
+root      1027     1  0 Jun13 ?        00:00:00 /usr/bin/abrt-watch-log -F BUG: WARNING: at WARNING: CPU: INFO: possible recursive locking detected ernel BUG at list_del corruption list_add corruption do_IRQ: stack overflow: ear stack overflow (cur: eneral protection fault nable to handle kernel ouble fault: RTNL: assertion failed eek! page_mapcount(page) went negative! adness at NETDEV WATCHDOG ysctl table check failed : nobody cared IRQ handler type mismatch Machine Check Exception: Machine check events logged divide error: bounds: coprocessor segment overrun: invalid TSS: segment not present: invalid opcode: alignment check: stack segment: fpu exception: simd exception: iret exception: /var/log/messages -- /usr/bin/abrt-dump-oops -xtD
+root      1036     1  0 Jun13 ?        00:00:00 /usr/bin/abrt-watch-log -F Backtrace /var/log/Xorg.0.log -- /usr/bin/abrt-dump-xorg -xD
+avahi     1037  1021  0 Jun13 ?        00:00:00 avahi-daemon: chroot helper
+root      1038     1  0 Jun13 ?        00:00:00 /usr/sbin/bluetoothd -n
+rtkit     1050     1  0 Jun13 ?        00:00:00 /usr/libexec/rtkit-daemon
+root      1051     1  0 Jun13 ?        00:00:00 /usr/libexec/accounts-daemon
+dbus      1052     1  0 Jun13 ?        00:00:13 /bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
+root      1054     1  0 Jun13 ?        00:00:34 /usr/sbin/sssd -D -f
+chrony    1056     1  0 Jun13 ?        00:00:00 /usr/sbin/chronyd -u chrony
+root      1066  1054  0 Jun13 ?        00:00:04 /usr/libexec/sssd/sssd_be --domain redhat.com --uid 0 --gid 0 --debug-to-files
+root      1080     1  0 Jun13 ?        00:00:28 /usr/sbin/NetworkManager --no-daemon
+polkitd   1086     1  0 Jun13 ?        00:00:29 /usr/lib/polkit-1/polkitd --no-debug
+root      1097  1054  0 Jun13 ?        00:00:10 /usr/libexec/sssd/sssd_nss --uid 0 --gid 0 --debug-to-files
+root      1098  1054  0 Jun13 ?        00:00:00 /usr/libexec/sssd/sssd_pam --uid 0 --gid 0 --debug-to-files
+root      1112     1  0 Jun13 ?        00:00:01 /usr/lib/systemd/systemd-logind
+root      1120     2  0 Jun13 ?        00:00:00 [iprt-VBoxWQueue]
+root      1122     2  0 Jun13 ?        00:00:00 [iprt-VBoxTscThr]
+root      1177     2  0 Jun13 ?        00:00:00 [krfcommd]
+root      1201     1  0 Jun13 ?        00:00:02 /usr/sbin/wpa_supplicant -u -f /var/log/wpa_supplicant.log -c /etc/wpa_supplicant/wpa_supplicant.conf -u -f /var/log/wpa_supplicant.log -P /var/run/wpa_supplicant.pid
+mthirion  1427  9220  0 09:18 pts/0    00:00:00 /bin/sh /redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/bin/karaf
+mthirion  1469  1427  0 09:18 pts/0    00:01:38 /usr/lib/jvm/java-1.7.0-openjdk/bin/java -server -Xms512M -Xmx1024M -XX:+UnlockDiagnosticVMOptions -XX:+UnsyncloadClass -XX:PermSize=128M -XX:MaxPermSize=256M -Dcom.sun.management.jmxremote -Dkaraf.restart.jvm.supported=true -Djava.endorsed.dirs=/usr/lib/jvm/java-1.7.0-openjdk/jre/lib/endorsed:/usr/lib/jvm/java-1.7.0-openjdk/lib/endorsed:/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/lib/endorsed -Djava.ext.dirs=/usr/lib/jvm/java-1.7.0-openjdk/jre/lib/ext:/usr/lib/jvm/java-1.7.0-openjdk/lib/ext:/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/lib/ext -Dkaraf.instances=/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/instances -Dkaraf.home=/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084 -Dkaraf.base=/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084 -Dkaraf.data=/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/data -Dkaraf.etc=/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/etc -Djava.io.tmpdir=/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/data/tmp -Djava.util.logging.config.file=/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/etc/java.util.logging.properties -Djavax.management.builder.initial=org.apache.karaf.management.boot.KarafMBeanServerBuilder -Densemble.auto.start=false -Dagent.auto.start=true -Dkaraf.startLocalConsole=true -Dkaraf.startRemoteShell=true -classpath /redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/lib/karaf-jaas-boot.jar:/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/lib/karaf.jar:/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/lib/karaf-jmx-boot.jar org.apache.karaf.main.Main
+mthirion  1693     1  0 09:19 pts/0    00:01:25 java -server -Dcom.sun.management.jmxremote -Dorg.jboss.gravia.repository.storage.dir=data/repository -Dzookeeper.url=127.0.0.1:2181 -Dzookeeper.password.encode=true -Dzookeeper.password=ZKENC=YWRtaW4= -Xmx768m -XX:MaxPermSize=256m -XX:+UnlockDiagnosticVMOptions -XX:+UnsyncloadClass -Dio.fabric8.datastore.gitRemotePollInterval=60000 -Dio.fabric8.datastore.importDir=fabric -Dio.fabric8.datastore.felix.fileinstall.filename=file:/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/etc/io.fabric8.datastore.cfg -Dio.fabric8.datastore.service.pid=io.fabric8.datastore -Dio.fabric8.datastore.component.name=io.fabric8.datastore -Densemble.auto.start=false -Dagent.auto.start=true -Djava.util.logging.config.file=/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/instances/query/etc/java.util.logging.properties -Djavax.management.builder.initial=org.apache.karaf.management.boot.KarafMBeanServerBuilder -Djava.endorsed.dirs=/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.91-2.6.2.1.el7_1.x86_64/jre/jre/lib/endorsed:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.91-2.6.2.1.el7_1.x86_64/jre/lib/endorsed:/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/lib/endorsed -Djava.ext.dirs=/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.91-2.6.2.1.el7_1.x86_64/jre/jre/lib/ext:/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.91-2.6.2.1.el7_1.x86_64/jre/lib/ext:/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/lib/ext -Dkaraf.home=/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084 -Dkaraf.base=/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/instances/query -Dkaraf.data=/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/instances/query/data -Dkaraf.etc=/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/instances/query/etc -Dkaraf.startLocalConsole=false -Dkaraf.startRemoteShell=true -classpath /redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/lib/karaf-jaas-boot.jar:/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/lib/org.apache.servicemix.specs.activator-2.5.0.jar:/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/lib/karaf-jmx-boot.jar:/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/lib/org.apache.karaf.diagnostic.core-2.4.0.redhat-621084.jar:/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/lib/esb-version.jar:/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/lib/karaf.jar:/redhat/platforms/fuse/jboss-fuse-6.2.1.redhat-084/lib/org.apache.servicemix.specs.locator-2.5.0.jar org.apache.karaf.main.Main
+mthirion  1840  9259  0 09:19 pts/1    00:00:00 tail -f fuse.log
+root      1986     1  0 Jun13 ?        00:01:39 /usr/sbin/cupsd -f
+root      1987     1  0 Jun13 ?        00:02:15 /usr/sbin/cups-browsed
+root      1989     1  0 Jun13 ?        00:00:00 /usr/sbin/sshd -D
+root      1992     1  0 Jun13 ?        00:00:00 /usr/sbin/libvirtd
+root      1993     1  0 Jun13 ?        00:00:00 /usr/bin/rhsmcertd
+root      2004     1  0 Jun13 ?        00:00:01 /usr/sbin/crond -n
+root      2005     1  0 Jun13 ?        00:00:00 /usr/sbin/atd -f
+root      2007     1  0 Jun13 ?        00:00:00 /usr/sbin/gdm
+colord    2008     1  0 Jun13 ?        00:00:00 /usr/libexec/colord
+root      2033  2007  0 Jun13 ?        00:00:00 /usr/libexec/gdm-simple-slave --display-id /org/gnome/DisplayManager/Displays/_0
+root      2042     1  0 Jun13 ?        00:00:00 rhnsd
+root      2419     1  0 Jun13 ?        00:00:00 /usr/libexec/postfix/master -w
+postfix   2437  2419  0 Jun13 ?        00:00:00 qmgr -l -t unix -u
+mthirion  3132  3970  0 09:54 ?        00:00:00 /redhat/platforms/dev/jbds/studio/jbdevstudio
+mthirion  3151  3132  6 09:54 ?        00:09:57 /usr/lib/jvm/java-1.8.0-openjdk/bin/java -Xms512m -Xmx1024m -Dosgi.instance.area.default=@user.home/workspace -jar /redhat/platforms/dev/installs/jbds-9.0.0/studio//plugins/org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar -os linux -ws gtk -arch x86_64 -showsplash -launcher /redhat/platforms/dev/installs/jbds-9.0.0/studio/jbdevstudio -name Jbdevstudio --launcher.library /redhat/platforms/dev/installs/jbds-9.0.0/studio//plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.1.300.v20150602-1417/eclipse_1612.so -startup /redhat/platforms/dev/installs/jbds-9.0.0/studio//plugins/org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar --launcher.overrideVmargs -exitdata 1720007 -product com.jboss.devstudio.core.product -vm /usr/lib/jvm/java-1.8.0-openjdk/bin/java -vmargs -Xms512m -Xmx1024m -Dosgi.instance.area.default=@user.home/workspace -jar /redhat/platforms/dev/installs/jbds-9.0.0/studio//plugins/org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar
+nobody    3198     1  0 Jun13 ?        00:00:00 /sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/default.conf --dhcp-script=/usr/libexec/libvirt_leaseshelper
+root      3199  3198  0 Jun13 ?        00:00:00 /sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/default.conf --dhcp-script=/usr/libexec/libvirt_leaseshelper
+root      3252  2033  1 Jun13 tty1     00:39:05 /usr/bin/Xorg :0 -background none -verbose -auth /run/gdm/auth-for-gdm-S9n9Yw/database -seat seat0 -nolisten tcp vt1
+root      3398     1  0 Jun13 ?        00:00:11 /usr/libexec/upowerd
+root      3610  2033  0 Jun13 ?        00:00:00 gdm-session-worker [pam/gdm-password]
+mthirion  3617     1  0 Jun13 ?        00:00:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+mthirion  3620  3610  0 Jun13 ?        00:00:00 gnome-session --session gnome-classic
+mthirion  3628     1  0 Jun13 ?        00:00:00 dbus-launch --sh-syntax --exit-with-session
+mthirion  3629     1  0 Jun13 ?        00:00:04 /bin/dbus-daemon --fork --print-pid 4 --print-address 6 --session
+mthirion  3694     1  0 Jun13 ?        00:00:00 /usr/libexec/gvfsd
+mthirion  3698     1  0 Jun13 ?        00:00:00 /usr/libexec//gvfsd-fuse /run/user/24504/gvfs -f -o big_writes
+mthirion  3775  3620  0 Jun13 ?        00:00:00 /usr/bin/ssh-agent /bin/sh -c exec -l /bin/bash -c "env GNOME_SHELL_SESSION_MODE=classic gnome-session --session gnome-classic"
+mthirion  3859     1  0 Jun13 ?        00:00:00 /usr/libexec/at-spi-bus-launcher
+mthirion  3863  3859  0 Jun13 ?        00:00:00 /bin/dbus-daemon --config-file=/etc/at-spi2/accessibility.conf --nofork --print-address 3
+mthirion  3867     1  0 Jun13 ?        00:00:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+mthirion  3880  3620  0 Jun13 ?        00:00:06 /usr/libexec/gnome-settings-daemon
+mthirion  3891     1  0 Jun13 ?        00:09:48 /usr/bin/pulseaudio --start
+mthirion  3920     1  0 Jun13 ?        00:00:00 /usr/libexec/gvfs-udisks2-volume-monitor
+root      3923     1  0 Jun13 ?        00:00:06 /usr/lib/udisks2/udisksd --no-debug
+mthirion  3938     1  0 Jun13 ?        00:00:00 /usr/libexec/gvfs-afc-volume-monitor
+mthirion  3945     1  0 Jun13 ?        00:00:00 /usr/libexec/gvfs-goa-volume-monitor
+mthirion  3948     1  0 Jun13 ?        00:00:09 /usr/libexec/goa-daemon
+mthirion  3958     1  0 Jun13 ?        00:00:19 /usr/libexec/goa-identity-service
+mthirion  3961     1  0 Jun13 ?        00:00:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+mthirion  3967     1  0 Jun13 ?        00:00:00 /usr/libexec/gvfs-mtp-volume-monitor
+mthirion  3970  3620  0 Jun13 ?        00:29:30 /usr/bin/gnome-shell
+mthirion  3975     1  0 Jun13 ?        00:00:00 /usr/libexec/dconf-service
+mthirion  3981  3880  0 Jun13 ?        00:00:01 syndaemon -i 1.0 -t -K -R
+mthirion  3988     1  0 Jun13 ?        00:00:00 /usr/libexec/gsd-printer
+mthirion  3998     1  0 Jun13 ?        00:00:09 /usr/bin/ibus-daemon --replace --xim --panel disable
+mthirion  4003  3998  0 Jun13 ?        00:00:00 /usr/libexec/ibus-dconf
+mthirion  4005     1  0 Jun13 ?        00:00:02 /usr/libexec/ibus-x11 --kill-daemon
+mthirion  4021     1  0 Jun13 ?        00:00:00 /usr/libexec/gnome-shell-calendar-server
+mthirion  4027     1  0 Jun13 ?        00:00:00 /usr/libexec/evolution-source-registry
+mthirion  4030     1  0 Jun13 ?        00:00:04 /usr/libexec/mission-control-5
+mthirion  4049     1  0 Jun13 ?        00:00:28 /usr/bin/nautilus --no-default-window
+mthirion  4076     1  0 Jun13 ?        00:00:00 /usr/libexec/gconfd-2
+mthirion  4084     1  0 Jun13 ?        00:00:00 /usr/libexec/gvfsd-trash --spawner :1.3 /org/gtk/gvfs/exec_spaw/0
+mthirion  4093     1  0 Jun13 ?        00:00:00 /usr/libexec/tracker-store
+mthirion  4116     1  0 Jun13 ?        00:00:00 /usr/libexec/evolution-addressbook-factory
+mthirion  4129     1  0 Jun13 ?        00:00:00 /usr/libexec/evolution-calendar-factory
+mthirion  4134  3620  0 Jun13 ?        00:01:38 parcellite
+mthirion  4137  3620  0 Jun13 ?        00:00:00 /usr/libexec/evolution/3.8/evolution-alarm-notify
+mthirion  4146  3620  0 Jun13 ?        00:00:00 abrt-applet
+mthirion  4149  3620  0 Jun13 ?        00:00:01 /usr/libexec/tracker-miner-fs
+mthirion  4163  3620  0 Jun13 ?        00:00:00 /usr/bin/seapplet
+mthirion  4180  3998  0 Jun13 ?        00:00:01 /usr/libexec/ibus-engine-simple
+mthirion  4217     1  0 Jun13 ?        00:00:24 /home/mthirion/.dropbox-dist/dropbox-lnx.x86_64-4.4.29/dropbox
+mthirion  4270     1  0 Jun13 ?        00:00:00 /usr/libexec/gvfsd-metadata
+mthirion  5298  3970  0 10:19 ?        00:00:00 /bin/sh /redhat/tools/yEd/yEd
+mthirion  5312  5298  1 10:19 ?        00:01:42 /redhat/tools/yEd/jre/bin/java -Dinstall4j.jvmDir=/redhat/tools/yEd/jre -Dexe4j.moduleName=/redhat/tools/yEd/yEd -Xmx512m -Dinstall4j.logEncoding=UTF-8 -Dinstall4j.launcherId=2 -Dinstall4j.swt=false -Di4j.vmov=true -Di4j.vmov=true -Di4j.vmov=true -Di4j.vmov=true -Di4j.vmov=true -Di4j.vpt=true -classpath /redhat/tools/yEd/.install4j/i4jruntime.jar:/redhat/tools/yEd/yed.jar com.install4j.runtime.launcher.Launcher launch B.A.A.B true false /redhat/tools/yEd/error.log /redhat/tools/yEd/output.log true true false s_1cj1rui.png true true 417 281  315 265 Arial 0,0,0 8 500 /home/all/behr/tmp/yed-versions/build/3.15/yed-vcs/deploy/../deploy/install4j 319 234 Arial 0,0,0 8 500 -1
+mthirion  6485 17437  0 10:54 pts/5    00:00:00 /bin/sh ./soapui.sh
+mthirion  6502  6485  0 10:54 pts/5    00:00:26 java -Xms128m -Xmx1024m -XX:MinHeapFreeRatio=20 -XX:MaxHeapFreeRatio=40 -Dsoapui.properties=soapui.properties -Dsoapui.home=/redhat/platforms/test/soapui/bin -splash:SoapUI-Spashscreen.png -Dsoapui.ext.libraries=/redhat/platforms/test/soapui/bin/ext -Dsoapui.ext.listeners=/redhat/platforms/test/soapui/bin/listeners -Dsoapui.ext.actions=/redhat/platforms/test/soapui/bin/actions -Djava.library.path=/redhat/platforms/test/soapui/bin -Dwsi.dir=/redhat/platforms/test/soapui/wsi-test-tools -cp /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.91-2.6.2.1.el7_1.x86_64/jre/lib/jfxrt.jar:/redhat/platforms/test/soapui/bin/soapui-5.2.1.jar:/redhat/platforms/test/soapui/lib/* com.eviware.soapui.SoapUI
+root      6876     2  0 11:01 ?        00:00:00 [kworker/1:2]
+root      8582     2  0 11:23 ?        00:00:00 [kworker/2:2]
+mthirion  9216     1  0 Jun13 ?        00:00:26 /usr/libexec/gnome-terminal-server
+mthirion  9219  9216  0 Jun13 ?        00:00:00 gnome-pty-helper
+mthirion  9220  9216  0 Jun13 pts/0    00:00:00 bash
+mthirion  9259  9216  0 Jun13 pts/1    00:00:00 bash
+root      9271     2  0 11:35 ?        00:00:00 [kworker/3:0]
+mthirion  9285  9216  0 Jun13 pts/2    00:00:00 bash
+mthirion  9416     1  0 Jun13 ?        00:00:25 /redhat/platforms/ci/nexus-2.11.4-01/nexus-main/bin/../bin/jsw/linux-x86-64/wrapper /redhat/platforms/ci/nexus-2.11.4-01/nexus-main/bin/../bin/jsw/conf/wrapper.conf wrapper.syslog.ident=nexus wrapper.pidfile=/redhat/platforms/ci/nexus-2.11.4-01/nexus-main/bin/../bin/jsw/linux-x86-64/nexus.pid wrapper.daemonize=TRUE
+mthirion  9418  9416  0 Jun13 ?        00:02:54 java -XX:MaxPermSize=192m -Djava.io.tmpdir=./tmp -Djava.net.preferIPv4Stack=true -Dcom.sun.jndi.ldap.connect.pool.protocol=plain ssl -Xms256m -Xmx768m -Djava.library.path=bin/jsw/lib -classpath bin/jsw/lib/wrapper-3.2.3.jar:./lib/jul-to-slf4j-1.7.6.jar:./lib/jetty-server-8.1.16.v20140903.jar:./lib/slf4j-api-1.7.6.jar:./lib/logback-classic-1.1.2.jar:./lib/jetty-continuation-8.1.16.v20140903.jar:./lib/jetty-util-8.1.16.v20140903.jar:./lib/metrics-jetty-2.2.0.jar:./lib/jetty-io-8.1.16.v20140903.jar:./lib/javax.servlet-3.0.0.v201112011016.jar:./lib/jetty-jmx-8.1.16.v20140903.jar:./lib/jetty-servlet-8.1.16.v20140903.jar:./lib/jetty-xml-8.1.16.v20140903.jar:./lib/logback-core-1.1.2.jar:./lib/jetty-client-8.1.16.v20140903.jar:./lib/jetty-webapp-8.1.16.v20140903.jar:./lib/jetty-http-8.1.16.v20140903.jar:./lib/logback-access-1.1.2.jar:./lib/jetty-security-8.1.16.v20140903.jar:./lib/metrics-logback-2.2.0.jar:./lib/metrics-core-2.2.0.jar:./lib/jetty-deploy-8.1.16.v20140903.jar:./lib/nexus-bootstrap-2.11.4-01.jar:./lib/plexus-interpolation-1.16.jar:./lib/jetty-rewrite-8.1.16.v20140903.jar:./conf/ -Dwrapper.key=_Y4ftuti86dUdt6x -Dwrapper.port=32000 -Dwrapper.jvm.port.min=31000 -Dwrapper.jvm.port.max=31999 -Dwrapper.pid=9416 -Dwrapper.version=3.2.3 -Dwrapper.native_library=wrapper -Dwrapper.service=TRUE -Dwrapper.cpu.timeout=10 -Dwrapper.jvmid=1 org.sonatype.nexus.bootstrap.jsw.JswLauncher ./conf/jetty.xml ./conf/jetty-requestlog.xml
+root      9497     2  0 11:39 ?        00:00:00 [kworker/0:1]
+mthirion 10164     1  3 11:51 ?        00:01:50 java -Xmx512m -XX:MaxPermSize=196m -Dxwiki.data.dir=data -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=data -Djetty.home=jetty -Djetty.base=data/jetty -Dfile.encoding=UTF8 -Djetty.port=8084 -jar jetty/start.jar --module=xwiki jetty.port=8084 STOP.KEY=xwiki STOP.PORT=8079
+mthirion 10178 10164  0 11:51 ?        00:00:00 /bin/bash /redhat/projects/xwiki/start_xwiki.sh
+root     10510     2  0 Jun13 ?        00:00:00 [xfsalloc]
+root     10511     2  0 Jun13 ?        00:00:00 [xfs_mru_cache]
+root     10535     2  0 Jun13 ?        00:00:00 [bioset]
+mthirion 11689  9216  0 Jun13 pts/4    00:00:00 bash
+root     13001     2  0 12:19 ?        00:00:00 [irq/60-mei_me]
+root     13039     2  0 12:19 ?        00:00:00 [kworker/u16:50]
+root     13040     2  0 12:19 ?        00:00:00 [kworker/u16:51]
+root     13041     2  0 12:19 ?        00:00:00 [kworker/u16:52]
+root     13042     2  0 12:19 ?        00:00:00 [kworker/u16:53]
+root     13147     2  0 12:19 ?        00:00:00 [kworker/2:1]
+root     13187  1080  0 12:19 ?        00:00:00 /sbin/dhclient -d -q -sf /usr/libexec/nm-dhcp-helper -pf /var/run/dhclient-wlp3s0.pid -lf /var/lib/NetworkManager/dhclient-3d82b9c1-7078-42c0-9c4e-cefbc24cbbff-wlp3s0.lease -cf /var/lib/NetworkManager/dhclient-wlp3s0.conf wlp3s0
+root     13242     1  0 12:19 ?        00:00:00 /usr/libexec/nm-vpnc-service
+root     13281 13242  0 12:19 ?        00:00:00 /usr/sbin/vpnc --non-inter --no-detach --pid-file /var/run/NetworkManager/nm-vpnc-90584280-a8da-40d5-8449-f0cd42abd08a.pid -
+root     13358     2  0 12:19 ?        00:00:00 [kworker/3:2]
+root     14419     2  0 12:27 ?        00:00:00 [kworker/u16:0]
+root     14665     2  0 12:30 ?        00:00:00 [kworker/1:0]
+root     15161     2  0 12:32 ?        00:00:00 [kworker/0:2]
+root     15168     2  0 12:32 ?        00:00:00 [kworker/u16:1]
+mthirion 15344 31017  4 Jun14 ?        01:11:03 /usr/lib64/firefox/plugin-container /usr/lib64/flash-plugin/libflashplayer.so -greomni /usr/lib64/firefox/omni.ja -appomni /usr/lib64/firefox/browser/omni.ja -appdir /usr/lib64/firefox/browser 31017 plugin
+postfix  15688  2419  0 12:36 ?        00:00:00 pickup -l -t unix -u
+mthirion 15943     1 31 12:37 ?        00:00:18 /usr/lib/jvm/java-1.7.0-openjdk/bin/java -DJENKINS_HOME=/redhat/platforms/ci/jenkins -jar /redhat/platforms/ci/jenkins1.638.war --httpPort=8088
+root     15963     2  0 12:37 ?        00:00:00 [kworker/1:1]
+mthirion 16159 10178  0 12:38 ?        00:00:00 sleep 1
+mthirion 16223 15943  0 12:38 ?        00:00:00 /bin/sh -xe /tmp/hudson1714978766303513578.sh
+mthirion 16226 16223  0 12:38 ?        00:00:00 /bin/sh /redhat/platforms/test/soapui/bin/mockservicerunner.sh -m CustomerServicesMock /redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace/targetService-soapui-project.xml
+mthirion 16228 16223  0 12:38 ?        00:00:00 ps -ef
+mthirion 16229 16223  0 12:38 ?        00:00:00 grep 0
+mthirion 17437  9216  0 Jun13 pts/5    00:00:00 bash
+mthirion 20847     1  0 Jun14 ?        00:00:02 gedit /home/mthirion/Dropbox/personal/Hyke/Environments.txt
+mthirion 31017  3970  5 Jun13 ?        02:14:51 /usr/lib64/firefox/firefox
+================================
+=
+= SOAPUI_HOME = /redhat/platforms/test/soapui
+=
+================================
+Parsing POMs
+[getCustomer] $ /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.65-2.b17.el7_1.x86_64/bin/java -cp /redhat/platforms/ci/jenkins/plugins/maven-plugin/WEB-INF/lib/maven31-agent-1.5.jar:/redhat/platforms/dev/maven/boot/plexus-classworlds-2.5.2.jar:/redhat/platforms/dev/maven/conf/logging jenkins.maven3.agent.Maven31Main /redhat/platforms/dev/maven /redhat/platforms/ci/jenkins/war/WEB-INF/lib/remoting-2.56.jar /redhat/platforms/ci/jenkins/plugins/maven-plugin/WEB-INF/lib/maven31-interceptor-1.5.jar /redhat/platforms/ci/jenkins/plugins/maven-plugin/WEB-INF/lib/maven3-interceptor-commons-1.5.jar 34678
+<===[JENKINS REMOTING CAPACITY]===>   channel started
+Executing Maven:  -B -f /redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace/getCustomer/pom.xml -s /redhat/platforms/dev/maven/conf/settings.xml -gs /redhat/platforms/dev/maven/conf/settings.xml test -Dtest=testIntegration
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Some problems were encountered while building the effective settings
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Unrecognised tag: 'repository' (position: START_TAG seen ...<!--\n\t     BPMS INTERNAL REPOSITORY\n\t-->\n        <repository>... @80:21)  @ /redhat/platforms/dev/maven/conf/settings.xml, line 80, column 21
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Unrecognised tag: 'repository' (position: START_TAG seen ...<!--\n\t     BPMS INTERNAL REPOSITORY\n\t-->\n        <repository>... @80:21)  @ /redhat/platforms/dev/maven/conf/settings.xml, line 80, column 21
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building getCustomer 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ getCustomer ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 11 resources
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ getCustomer ---
+[INFO] No sources to compile
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ getCustomer ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 9 resources
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ getCustomer ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.15:test (default-test) @ getCustomer ---
+[INFO] Surefire report directory: /redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace/getCustomer/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running testIntegration
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.17 sec <<< FAILURE! - in testIntegration
+sendRequest(testIntegration)  Time elapsed: 0.058 sec  <<< ERROR!
+java.io.IOException: Server returned HTTP response code: 500 for URL: http://localhost:8060/getCustomer
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1840)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at testIntegration.sendRequest(testIntegration.java:90)
+
+
+Results :
+
+Tests in error: 
+  testIntegration.sendRequest:90 » IO Server returned HTTP response code: 500 fo...
+
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
+
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] There are test failures.
+
+Please refer to /redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace/getCustomer/target/surefire-reports for the individual test results.
+[JENKINS] Recording test results
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 5.972 s
+[INFO] Finished at: 2016-06-15T12:38:28+02:00
+[INFO] Final Memory: 23M/234M
+[INFO] ------------------------------------------------------------------------
+Waiting for Jenkins to finish collecting data
+[JENKINS] Archiving /redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace/getCustomer/pom.xml to org.redhat.integration/getCustomer/0.0.1-SNAPSHOT/getCustomer-0.0.1-SNAPSHOT.pom
+channel stopped
+[workspace] $ /bin/sh -xe /tmp/hudson873740191176564584.sh
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Couldn't clean up oid=3 from null
+hudson.remoting.ChannelClosedException: channel is already closed
+	at hudson.remoting.Channel.send(Channel.java:578)
+	at hudson.remoting.RemoteInvocationHandler$PhantomReferenceImpl.cleanup(RemoteInvocationHandler.java:360)
+	at hudson.remoting.RemoteInvocationHandler$PhantomReferenceImpl.access$700(RemoteInvocationHandler.java:319)
+	at hudson.remoting.RemoteInvocationHandler$Unexporter.run(RemoteInvocationHandler.java:420)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at hudson.remoting.AtmostOneThreadExecutor$Worker.run(AtmostOneThreadExecutor.java:110)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: hudson.remoting.Channel$OrderlyShutdown
+	at hudson.remoting.Channel$CloseCommand.execute(Channel.java:1080)
+	at hudson.remoting.Channel$1.handle(Channel.java:501)
+	at hudson.remoting.SynchronousCommandTransport$ReaderThread.run(SynchronousCommandTransport.java:60)
+Caused by: Command close created at
+	at hudson.remoting.Command.<init>(Command.java:56)
+	at hudson.remoting.Channel$CloseCommand.<init>(Channel.java:1074)
+	at hudson.remoting.Channel$CloseCommand.<init>(Channel.java:1072)
+	at hudson.remoting.Channel.close(Channel.java:1156)
+	at hudson.remoting.Channel.close(Channel.java:1138)
+	at hudson.maven.ProcessCache$MavenProcess.discard(ProcessCache.java:150)
+	at hudson.maven.MavenModuleSetBuild$MavenModuleSetBuildExecution.doRun(MavenModuleSetBuild.java:848)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:534)
+	at hudson.model.Run.execute(Run.java:1738)
+	at hudson.maven.MavenModuleSetBuild.run(MavenModuleSetBuild.java:529)
+	at hudson.model.ResourceController.execute(ResourceController.java:98)
+	at hudson.model.Executor.run(Executor.java:410)
++ echo 'stopping mock service'
+stopping mock service
++ [[ -r /redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace/mock.pid ]]
+++ cat /redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace/mock.pid
++ kill 0
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

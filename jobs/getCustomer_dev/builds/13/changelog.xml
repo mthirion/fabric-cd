@@ -1,0 +1,11 @@
+commit 51546a43a9f526936283effe882c3fea7bf9a817
+tree 291a65a52e964e0dd92aab7d88b74c68d1191a43
+parent 8660511455b0f5a939e628b6abf41551fae79b44
+author mthirion <mthirion@redhat.com> 2016-06-16 14:21:15 +0200
+committer GitHub <noreply@github.com> 2016-06-16 14:21:15 +0200
+
+    Update pom.xml
+
+
+
+:100644 100644 21a254370897c566f680c332214dcce425dfaa4b ee0d5feef0def44f3b54e8f0b158fe04177bb3e7 M	getCustomer/pom.xml

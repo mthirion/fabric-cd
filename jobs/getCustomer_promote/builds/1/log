@@ -1,0 +1,74 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Building in workspace /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace
+Cloning the remote Git repository
+Cloning repository https://github.com/mthirion/fabric-cd.git
+ > git init /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace # timeout=10
+Fetching upstream changes from https://github.com/mthirion/fabric-cd.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username mthirion # timeout=10
+ > git config --local credential.helper store --file=/tmp/git308481832813318371.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/mthirion/fabric-cd.git +refs/heads/*:refs/remotes/fabric-cd/*
+ > git config --local --remove-section credential # timeout=10
+ > git config remote.fabric-cd.url https://github.com/mthirion/fabric-cd.git # timeout=10
+ > git config --add remote.fabric-cd.fetch +refs/heads/*:refs/remotes/fabric-cd/* # timeout=10
+ > git config remote.fabric-cd.url https://github.com/mthirion/fabric-cd.git # timeout=10
+Fetching upstream changes from https://github.com/mthirion/fabric-cd.git
+using .gitcredentials to set credentials
+ > git config --local credential.username mthirion # timeout=10
+ > git config --local credential.helper store --file=/tmp/git6894112884142729033.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/mthirion/fabric-cd.git +refs/heads/*:refs/remotes/fabric-cd/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/fabric-cd/dev^{commit} # timeout=10
+ > git rev-parse refs/remotes/fabric-cd/fabric-cd/dev^{commit} # timeout=10
+Merging Revision 7f1504393b3e13b7c466b09c5c1b299ea4f48e92 (refs/remotes/fabric-cd/dev) to fabric-cd/release, UserMergeOptions{mergeRemote='fabric-cd', mergeTarget='release', mergeStrategy='default', fastForwardMode='--ff'}
+ > git rev-parse fabric-cd/release^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f fabric-cd/release
+ > git merge --ff 7f1504393b3e13b7c466b09c5c1b299ea4f48e92 # timeout=10
+ > git rev-parse HEAD^{commit} # timeout=10
+Seen branch in repository fabric-cd/build
+Seen branch in repository fabric-cd/dev
+Seen branch in repository fabric-cd/master
+Seen branch in repository fabric-cd/release
+Seen 4 remote branches
+Checking out Revision d86c2a1a37d8f9d9619eee2ad9f585847fbeaa0e (fabric-cd/release, fabric-cd/master, fabric-cd/release)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f d86c2a1a37d8f9d9619eee2ad9f585847fbeaa0e
+First time build. Skipping changelog.
+[workspace] $ /bin/sh -xe /tmp/hudson3366614813843521227.sh
++ echo 'computing version'
+computing version
++ export RELEASE_VERSION=
++ RELEASE_VERSION=
+[workspace] $ /redhat/platforms/dev/maven/bin/mvn -f queryCustomer/pom.xml -s /redhat/platforms/dev/maven/conf/settings.xml -gs /redhat/platforms/dev/maven/conf/settings.xml -DMVN_RELEASE_VERSION=NaN -DJOLOKIA_URL=http://localhost:8181:jolokia -DMVN_DEV_VERSION=NaN-SNAPSHOT -DMVN_ISDRYRUN=false deploy -Dmaven.test.skip=true
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Some problems were encountered while building the effective settings
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Unrecognised tag: 'repository' (position: START_TAG seen ...<!--\n\t     BPMS INTERNAL REPOSITORY\n\t-->\n        <repository>... @80:21)  @ /redhat/platforms/dev/maven/conf/settings.xml, line 80, column 21
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Unrecognised tag: 'repository' (position: START_TAG seen ...<!--\n\t     BPMS INTERNAL REPOSITORY\n\t-->\n        <repository>... @80:21)  @ /redhat/platforms/dev/maven/conf/settings.xml, line 80, column 21
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 
+[INFO] Scanning for projects...
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] [ERROR] Some problems were encountered while processing the POMs:
+[FATAL] Non-readable POM /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/queryCustomer/pom.xml: /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/queryCustomer/pom.xml (No such file or directory) @ 
+ @ 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] The build could not read 1 project -> [Help 1]
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR]   
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR]   The project  (/redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/queryCustomer/pom.xml) has 1 error
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR]     Non-readable POM /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/queryCustomer/pom.xml: /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/queryCustomer/pom.xml (No such file or directory)
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/ProjectBuildingException
+Build step 'Invoke top-level Maven targets' marked build as failure
+ > git tag -l ${RELEASE_VERSION} # timeout=10
+ > git tag -a -f -m Jenkins Git plugin tagging with ${RELEASE_VERSION} ${RELEASE_VERSION} # timeout=10
+Pushing tag ${RELEASE_VERSION} to repo fabric-cd
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username mthirion # timeout=10
+ > git config --local credential.helper store --file=/tmp/git5890631167639331414.credentials # timeout=10
+ > git -c core.askpass=true push https://github.com/mthirion/fabric-cd.git ${RELEASE_VERSION}
+ > git config --local --remove-section credential # timeout=10
+Finished: FAILURE

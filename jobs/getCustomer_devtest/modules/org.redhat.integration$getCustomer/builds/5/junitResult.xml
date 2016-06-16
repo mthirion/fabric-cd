@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<result plugin="junit@1.11">
+  <suites>
+    <suite>
+      <file>/redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace/getCustomer/target/surefire-reports/TEST-testIntegration.xml</file>
+      <name>testIntegration</name>
+      <duration>0.05</duration>
+      <cases>
+        <case>
+          <duration>0.05</duration>
+          <className>testIntegration</className>
+          <testName>sendRequest</testName>
+          <skipped>false</skipped>
+          <errorStackTrace>java.io.IOException: Server returned HTTP response code: 500 for URL: http://localhost:8060/getCustomer
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1840)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1441)
+	at testIntegration.sendRequest(testIntegration.java:90)
+</errorStackTrace>
+          <errorDetails>Server returned HTTP response code: 500 for URL: http://localhost:8060/getCustomer</errorDetails>
+          <failedSince>3</failedSince>
+        </case>
+      </cases>
+    </suite>
+  </suites>
+  <duration>0.05</duration>
+  <keepLongStdio>false</keepLongStdio>
+</result>

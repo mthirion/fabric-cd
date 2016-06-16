@@ -1,0 +1,25 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Building in workspace /redhat/platforms/ci/jenkins/jobs/getCustomer_release/workspace
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/mthirion/fabric-cd.git # timeout=10
+Fetching upstream changes from https://github.com/mthirion/fabric-cd.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username mthirion # timeout=10
+ > git config --local credential.helper store --file=/tmp/git8537729497824419546.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/mthirion/fabric-cd.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/release^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/release^{commit} # timeout=10
+Checking out Revision 066c29660d72f1cf40b17bf7c3396790dd01ecc9 (refs/remotes/origin/release)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 066c29660d72f1cf40b17bf7c3396790dd01ecc9
+ > git rev-list 066c29660d72f1cf40b17bf7c3396790dd01ecc9 # timeout=10
+[workspace] $ /bin/sh -xe /tmp/hudson5781482346282033307.sh
++ echo 'computing version'
+computing version
++ [[ '' == \S\N\A\P\S\H\O\T ]]
++ exit 1
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

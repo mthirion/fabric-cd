@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.maven.MavenBuild plugin="maven-plugin@2.7.1">
+  <actions>
+    <hudson.tasks.Fingerprinter_-FingerprintAction>
+      <record>
+        <entry>
+          <string>org.redhat.integration:getCustomer:pom.xml</string>
+          <string>8121d4a357b3c604cbeec3bdd28b5e3c</string>
+        </entry>
+      </record>
+    </hudson.tasks.Fingerprinter_-FingerprintAction>
+    <hudson.maven.reporters.MavenArtifactRecord>
+      <records/>
+      <parent reference="../../.."/>
+      <pomArtifact>
+        <groupId>org.redhat.integration</groupId>
+        <artifactId>getCustomer</artifactId>
+        <version>0.0.2-SNAPSHOT</version>
+        <type>pom</type>
+        <fileName>pom.xml</fileName>
+        <canonicalName>getCustomer-0.0.2-SNAPSHOT.pom</canonicalName>
+        <md5sum>8121d4a357b3c604cbeec3bdd28b5e3c</md5sum>
+      </pomArtifact>
+      <mainArtifact reference="../pomArtifact"/>
+      <attachedArtifacts/>
+      <repositoryId>nexus-snapshots</repositoryId>
+      <repositoryUrl>http://127.0.0.1:8081/nexus/content/repositories/snapshots</repositoryUrl>
+    </hudson.maven.reporters.MavenArtifactRecord>
+  </actions>
+  <queueId>-1</queueId>
+  <timestamp>1466083293425</timestamp>
+  <startTime>1466083296867</startTime>
+  <result>SUCCESS</result>
+  <duration>694</duration>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/redhat/platforms/ci/jenkins/jobs/getCustomer_release/workspace/getCustomer</workspace>
+  <executedMojos class="java.util.concurrent.CopyOnWriteArrayList">
+    <hudson.maven.ExecutedMojo>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-clean-plugin</artifactId>
+      <version>2.5</version>
+      <goal>clean</goal>
+      <executionId>default-clean</executionId>
+      <duration>102</duration>
+      <digest>9a18e4d3f6e6495ed92b7d4694b41e66</digest>
+    </hudson.maven.ExecutedMojo>
+  </executedMojos>
+</hudson.maven.MavenBuild>

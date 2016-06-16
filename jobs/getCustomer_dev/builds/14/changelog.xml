@@ -1,0 +1,22 @@
+commit e36f9eaf422d3f446e9a8101424a3e18cb483cba
+tree 5155795c116dfe9738d2c488516322200b626060
+parent dc7bd3f76d13a4b1f9a79c65352fb5b2873b3928
+author Michael Thirion <mthirion@mthirion.remote.csb> 2016-06-16 15:29:37 +0200
+committer Michael Thirion <mthirion@mthirion.remote.csb> 2016-06-16 15:29:37 +0200
+
+    Version 0.0.3
+
+
+
+:100644 100644 ee5ffc538f0b2c8d86c3dee8d70e85618a8e0cb7 0dd7af8605db007d8f95593eff8d55a9732994fa M	getCustomer/pom.xml
+commit ec11b9c6f8d138696f254632c3f778a42bc11932
+tree d75bb0f1e26f7222d6c99c395fcb7e3d93e8edcc
+parent 8660511455b0f5a939e628b6abf41551fae79b44
+author Michael Thirion <mthirion@mthirion.remote.csb> 2016-06-16 14:22:07 +0200
+committer Michael Thirion <mthirion@mthirion.remote.csb> 2016-06-16 14:22:07 +0200
+
+    Adapt sopaui plugin version
+
+
+
+:100644 100644 21a254370897c566f680c332214dcce425dfaa4b 483eae48ee407b6e1976b3a015e49315ca58f4a5 M	getCustomer/pom.xml

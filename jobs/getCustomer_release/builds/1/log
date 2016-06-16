@@ -1,0 +1,34 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Building in workspace /redhat/platforms/ci/jenkins/jobs/getCustomer_release/workspace
+Cloning the remote Git repository
+Cloning repository https://github.com/mthirion/fabric-cd.git
+ > git init /redhat/platforms/ci/jenkins/jobs/getCustomer_release/workspace # timeout=10
+Fetching upstream changes from https://github.com/mthirion/fabric-cd.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username mthirion # timeout=10
+ > git config --local credential.helper store --file=/tmp/git5088172127617993751.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/mthirion/fabric-cd.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git config remote.origin.url https://github.com/mthirion/fabric-cd.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/mthirion/fabric-cd.git # timeout=10
+Fetching upstream changes from https://github.com/mthirion/fabric-cd.git
+using .gitcredentials to set credentials
+ > git config --local credential.username mthirion # timeout=10
+ > git config --local credential.helper store --file=/tmp/git7539121480642699635.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/mthirion/fabric-cd.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/release^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/release^{commit} # timeout=10
+Checking out Revision 066c29660d72f1cf40b17bf7c3396790dd01ecc9 (refs/remotes/origin/release)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 066c29660d72f1cf40b17bf7c3396790dd01ecc9
+First time build. Skipping changelog.
+[workspace] $ /bin/sh -xe /tmp/hudson1282954353241739798.sh
++ echo 'computing version'
+computing version
++ [[ '' == \S\N\A\P\S\H\O\T ]]
++ exit 1
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

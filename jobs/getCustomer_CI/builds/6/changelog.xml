@@ -1,0 +1,45 @@
+commit 51546a43a9f526936283effe882c3fea7bf9a817
+tree 291a65a52e964e0dd92aab7d88b74c68d1191a43
+parent 8660511455b0f5a939e628b6abf41551fae79b44
+author mthirion <mthirion@redhat.com> 2016-06-16 14:21:15 +0200
+committer GitHub <noreply@github.com> 2016-06-16 14:21:15 +0200
+
+    Update pom.xml
+
+
+
+:100644 100644 21a254370897c566f680c332214dcce425dfaa4b ee0d5feef0def44f3b54e8f0b158fe04177bb3e7 M	getCustomer/pom.xml
+commit 8660511455b0f5a939e628b6abf41551fae79b44
+tree aaa51ab2aa2c4797723ddac5a6d8eda1f0d87a49
+parent d86c2a1a37d8f9d9619eee2ad9f585847fbeaa0e
+author Michael Thirion <mthirion@mthirion.remote.csb> 2016-06-15 17:26:01 +0200
+committer Michael Thirion <mthirion@mthirion.remote.csb> 2016-06-15 17:26:01 +0200
+
+    Add SCM param for release plugin
+
+
+
+:100644 100644 496e2a67d01d4a887bfbb9a096b87d43e1faf73c 21a254370897c566f680c332214dcce425dfaa4b M	getCustomer/pom.xml
+commit d86c2a1a37d8f9d9619eee2ad9f585847fbeaa0e
+tree 36be74d246f3c16832cd48d866028f068801ffff
+parent 3cdfab68328f409253e3412c58120676958c06ac
+author Michael Thirion <mthirion@mthirion.remote.csb> 2016-06-15 12:27:06 +0200
+committer Michael Thirion <mthirion@mthirion.remote.csb> 2016-06-15 12:27:06 +0200
+
+    Parameterized test URL
+
+
+
+:100644 100644 153379e48f77053979e51ad8c2600882405c51a6 29f680c989e47a01abb5f60c1cdb7aaa15a40aa6 M	getCustomer/src/test/java/testIntegration.java
+:000000 100644 0000000000000000000000000000000000000000 bd47cf3985b149e36ed76408f8c7c1cb0fe26be8 A	getCustomer/src/test/resources/application.properties
+commit 3cdfab68328f409253e3412c58120676958c06ac
+tree 77b413ba13dd1eea82e43fdd0951a5cf0fa91072
+parent 7f1504393b3e13b7c466b09c5c1b299ea4f48e92
+author Michael Thirion <mthirion@mthirion.remote.csb> 2016-06-15 11:25:08 +0200
+committer Michael Thirion <mthirion@mthirion.remote.csb> 2016-06-15 11:25:08 +0200
+
+    Fix soapui maven plugin
+
+
+
+:100644 100644 34219983c83b8ba68fe0ae5a12c84013edfa5db4 496e2a67d01d4a887bfbb9a096b87d43e1faf73c M	getCustomer/pom.xml

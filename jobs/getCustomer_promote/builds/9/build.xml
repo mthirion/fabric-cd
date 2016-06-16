@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.maven.MavenModuleSetBuild plugin="maven-plugin@2.7.1">
+  <actions>
+    <hudson.model.ParametersAction>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>JOLOKIA_URL</name>
+          <description></description>
+          <value>http://localhost:8181:jolokia</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>GIT_USERNAME</name>
+          <description></description>
+          <value>mthirion</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.PasswordParameterValue>
+          <name>GIT_PASSWORD</name>
+          <description></description>
+          <value>w6dn3xrOcOUzzwl4DNnTfDmXVPRmBfcw+MrBnylODWI=</value>
+        </hudson.model.PasswordParameterValue>
+      </parameters>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause/>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <hudson.plugins.git.util.MergeRecord plugin="git@2.4.4">
+      <branch>fabric-cd/release</branch>
+      <sha1>d86c2a1a37d8f9d9619eee2ad9f585847fbeaa0e</sha1>
+    </hudson.plugins.git.util.MergeRecord>
+    <hudson.plugins.git.util.BuildData plugin="git@2.4.4">
+      <buildsByBranchName>
+        <entry>
+          <string>fabric-cd/release</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@1.19.6">
+              <sha1>8660511455b0f5a939e628b6abf41551fae79b44</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/fabric-cd/dev</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision plugin="git-client@1.19.6">
+              <sha1>8660511455b0f5a939e628b6abf41551fae79b44</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>fabric-cd/master</name>
+                </hudson.plugins.git.Branch>
+                <hudson.plugins.git.Branch>
+                  <sha1>8660511455b0f5a939e628b6abf41551fae79b44</sha1>
+                  <name>fabric-cd/dev</name>
+                </hudson.plugins.git.Branch>
+                <hudson.plugins.git.Branch>
+                  <sha1>d86c2a1a37d8f9d9619eee2ad9f585847fbeaa0e</sha1>
+                  <name>fabric-cd/release</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </revision>
+            <hudsonBuildNumber>9</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+        <entry>
+          <string>fabric-cd/dev</string>
+          <hudson.plugins.git.util.Build reference="../../entry/hudson.plugins.git.util.Build"/>
+        </entry>
+        <entry>
+          <string>refs/remotes/fabric-cd/dev</string>
+          <hudson.plugins.git.util.Build reference="../../entry/hudson.plugins.git.util.Build"/>
+        </entry>
+        <entry>
+          <string>fabric-cd/master</string>
+          <hudson.plugins.git.util.Build reference="../../entry/hudson.plugins.git.util.Build"/>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>https://github.com/mthirion/fabric-cd.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <hudson.plugins.git.GitTagAction plugin="git@2.4.4">
+      <tags class="hudson.util.CopyOnWriteMap$Tree">
+        <entry>
+          <string>fabric-cd/dev</string>
+          <list/>
+        </entry>
+        <entry>
+          <string>fabric-cd/master</string>
+          <list/>
+        </entry>
+        <entry>
+          <string>fabric-cd/release</string>
+          <list/>
+        </entry>
+      </tags>
+      <ws>/redhat/platforms/ci/jenkins/jobs/getCustomer_release/workspace</ws>
+    </hudson.plugins.git.GitTagAction>
+    <hudson.scm.SCMRevisionState_-None/>
+    <hudson.maven.reporters.MavenAggregatedArtifactRecord>
+      <records/>
+      <parent reference="../../.."/>
+    </hudson.maven.reporters.MavenAggregatedArtifactRecord>
+    <hudson.tasks.Fingerprinter_-FingerprintAction>
+      <record>
+        <entry>
+          <string>org.redhat.integration:getCustomer:pom.xml</string>
+          <string>ed6504dd5b0892f5143af4b2ef4ad4e5</string>
+        </entry>
+      </record>
+    </hudson.tasks.Fingerprinter_-FingerprintAction>
+  </actions>
+  <queueId>58</queueId>
+  <timestamp>1466006814236</timestamp>
+  <startTime>1466006814237</startTime>
+  <result>FAILURE</result>
+  <duration>13538</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/redhat/platforms/ci/jenkins/jobs/getCustomer_release/workspace</workspace>
+  <hudsonVersion>2.0</hudsonVersion>
+  <scm class="hudson.plugins.git.GitChangeLogParser" plugin="git@2.4.4">
+    <authorOrCommitter>false</authorOrCommitter>
+  </scm>
+  <culprits class="com.google.common.collect.RegularImmutableSortedSet">
+    <string>mthirion</string>
+  </culprits>
+  <mavenVersionUsed>3.3.9</mavenVersionUsed>
+</hudson.maven.MavenModuleSetBuild>

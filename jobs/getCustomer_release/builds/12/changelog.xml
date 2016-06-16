@@ -1,0 +1,22 @@
+commit 69d8dc64651e66bd6d84e9e180ed935d76cd3c8a
+tree 605ba00e6cfbb3425efb20e39adc8c8b4e2b8008
+parent 34100fc8dddb4a74416b5c90aa55b52b0cfc3967
+author mthirion <mthirion@redhat.com> 2016-06-15 19:38:00 +0200
+committer GitHub <noreply@github.com> 2016-06-15 19:38:00 +0200
+
+    Update pom.xml
+
+
+
+:100644 100644 651dfb593e357929e2bed6442ec9899910dc7404 09e1d2a839be86949947befc83c972643a92166e M	getCustomer/pom.xml
+commit 34100fc8dddb4a74416b5c90aa55b52b0cfc3967
+tree 116188e14e8267bce4e98f6a6afecc15f484032b
+parent 7eb1ef474481621dbc2c0c2d93b82fe04969af33
+author mthirion <mthirion@redhat.com> 2016-06-15 19:36:21 +0200
+committer mthirion <mthirion@redhat.com> 2016-06-15 19:36:21 +0200
+
+    [maven-release-plugin] prepare release getCustomer-0.0.1
+
+
+
+:100644 100644 09e1d2a839be86949947befc83c972643a92166e 651dfb593e357929e2bed6442ec9899910dc7404 M	getCustomer/pom.xml

@@ -1,0 +1,43 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Building in workspace /redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace
+Cloning the remote Git repository
+Cloning repository https://github.com/mthirion/fabric-cd.git
+ > git init /redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace # timeout=10
+Fetching upstream changes from https://github.com/mthirion/fabric-cd.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username mthirion # timeout=10
+ > git config --local credential.helper store --file=/tmp/git6603330127130650087.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/mthirion/fabric-cd.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git config remote.origin.url https://github.com/mthirion/fabric-cd.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/mthirion/fabric-cd.git # timeout=10
+Fetching upstream changes from https://github.com/mthirion/fabric-cd.git
+using .gitcredentials to set credentials
+ > git config --local credential.username mthirion # timeout=10
+ > git config --local credential.helper store --file=/tmp/git946823587693293047.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/mthirion/fabric-cd.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/dev^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/dev^{commit} # timeout=10
+Checking out Revision 7f1504393b3e13b7c466b09c5c1b299ea4f48e92 (refs/remotes/origin/dev)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 7f1504393b3e13b7c466b09c5c1b299ea4f48e92
+First time build. Skipping changelog.
+[workspace] $ /bin/sh -xe /tmp/hudson406302918240394363.sh
++ echo 'temporary copying soapui files into jenkins workspace'
+temporary copying soapui files into jenkins workspace
++ mkdir -p /redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace/src/test/resources/soapui
++ cp '/redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace/queryCustomer/src/test/resources/soapui/*.xml' /redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace/src/test/resources/soapui/
+cp: cannot stat ‘/redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace/queryCustomer/src/test/resources/soapui/*.xml’: No such file or directory
+Build step 'Execute shell' marked build as failure
+[workspace] $ /bin/sh -xe /tmp/hudson4644896111987180397.sh
++ echo 'stopping mock service'
+stopping mock service
++ [[ -r /redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace/mock.pid ]]
+[workspace] $ /bin/sh -xe /tmp/hudson5189204534488978766.sh
++ echo 'cleaning jenkins workspace from soapui files'
+cleaning jenkins workspace from soapui files
++ rm -rf /redhat/platforms/ci/jenkins/jobs/getCustomer_devtest/workspace/src
+Finished: FAILURE

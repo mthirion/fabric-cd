@@ -1,0 +1,219 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Building in workspace /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/mthirion/fabric-cd.git # timeout=10
+Fetching upstream changes from https://github.com/mthirion/fabric-cd.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username mthirion # timeout=10
+ > git config --local credential.helper store --file=/tmp/git8152323726763594971.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/mthirion/fabric-cd.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/release^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/release^{commit} # timeout=10
+Checking out Revision 1b0b67e791ae41e5df6c0b0f09bb3e575f7e260a (refs/remotes/origin/release)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 1b0b67e791ae41e5df6c0b0f09bb3e575f7e260a
+ > git rev-list d2282f6a6790d4f3a12afe1bb8d16d0d59d3cf0e # timeout=10
+[workspace] $ /redhat/platforms/dev/maven/bin/mvn -f getCustomer/pom.xml -s /redhat/platforms/dev/maven/conf/settings.xml -gs /redhat/platforms/dev/maven/conf/settings.xml -DJOLOKIA_URL=http://localhost:8181/jolokia deploy -Dmaven.test.skip=true
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Some problems were encountered while building the effective settings
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Unrecognised tag: 'repository' (position: START_TAG seen ...<!--\n\t     BPMS INTERNAL REPOSITORY\n\t-->\n        <repository>... @80:21)  @ /redhat/platforms/dev/maven/conf/settings.xml, line 80, column 21
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Unrecognised tag: 'repository' (position: START_TAG seen ...<!--\n\t     BPMS INTERNAL REPOSITORY\n\t-->\n        <repository>... @80:21)  @ /redhat/platforms/dev/maven/conf/settings.xml, line 80, column 21
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building getCustomer 0.0.1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ getCustomer ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 11 resources
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ getCustomer ---
+[INFO] No sources to compile
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ getCustomer ---
+[INFO] Not copying test resources
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ getCustomer ---
+[INFO] Not compiling test sources
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.15:test (default-test) @ getCustomer ---
+[INFO] Tests are skipped.
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-bundle-plugin:2.3.7:bundle (default-bundle) @ getCustomer ---
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- soapui-maven-plugin:5.2.1:test (robustness-testing) @ getCustomer ---
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- soapui-maven-plugin:5.2.1:loadtest (perf-testing) @ getCustomer ---
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ getCustomer ---
+[INFO] Installing /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/getCustomer/target/shared.jar to /redhat/platforms/dev/installs/maven/local/org/redhat/integration/getCustomer/0.0.1/getCustomer-0.0.1.jar
+[INFO] Installing /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/getCustomer/pom.xml to /redhat/platforms/dev/installs/maven/local/org/redhat/integration/getCustomer/0.0.1/getCustomer-0.0.1.pom
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-bundle-plugin:2.3.7:install (default-install) @ getCustomer ---
+[INFO] Installing org/redhat/integration/getCustomer/0.0.1/getCustomer-0.0.1.jar
+[INFO] Writing OBR metadata
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-deploy-plugin:2.8.2:deploy (default-deploy) @ getCustomer ---
+Uploading: http://127.0.0.1:8081/nexus/content/repositories/releases/org/redhat/integration/getCustomer/0.0.1/getCustomer-0.0.1.jar
+2/12 KB   4/12 KB   6/12 KB   8/12 KB   10/12 KB   12/12 KB              Uploaded: http://127.0.0.1:8081/nexus/content/repositories/releases/org/redhat/integration/getCustomer/0.0.1/getCustomer-0.0.1.jar (12 KB at 65.7 KB/sec)
+Uploading: http://127.0.0.1:8081/nexus/content/repositories/releases/org/redhat/integration/getCustomer/0.0.1/getCustomer-0.0.1.pom
+2/10 KB    4/10 KB   6/10 KB   8/10 KB   10/10 KB              Uploaded: http://127.0.0.1:8081/nexus/content/repositories/releases/org/redhat/integration/getCustomer/0.0.1/getCustomer-0.0.1.pom (10 KB at 177.6 KB/sec)
+Downloading: http://127.0.0.1:8081/nexus/content/repositories/releases/org/redhat/integration/getCustomer/maven-metadata.xml
+           Uploading: http://127.0.0.1:8081/nexus/content/repositories/releases/org/redhat/integration/getCustomer/maven-metadata.xml
+313/313 B               Uploaded: http://127.0.0.1:8081/nexus/content/repositories/releases/org/redhat/integration/getCustomer/maven-metadata.xml (313 B at 8.5 KB/sec)
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-bundle-plugin:2.3.7:deploy (default-deploy) @ getCustomer ---
+[INFO] Remote OBR update disabled (enable with -DremoteOBR)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.405 s
+[INFO] Finished at: 2016-06-16T11:38:15+02:00
+[INFO] Final Memory: 27M/293M
+[INFO] ------------------------------------------------------------------------
+Parsing POMs
+[getCustomer] $ /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.65-2.b17.el7_1.x86_64/bin/java -cp /redhat/platforms/ci/jenkins/plugins/maven-plugin/WEB-INF/lib/maven31-agent-1.5.jar:/redhat/platforms/dev/maven/boot/plexus-classworlds-2.5.2.jar:/redhat/platforms/dev/maven/conf/logging jenkins.maven3.agent.Maven31Main /redhat/platforms/dev/maven /redhat/platforms/ci/jenkins/war/WEB-INF/lib/remoting-2.56.jar /redhat/platforms/ci/jenkins/plugins/maven-plugin/WEB-INF/lib/maven31-interceptor-1.5.jar /redhat/platforms/ci/jenkins/plugins/maven-plugin/WEB-INF/lib/maven3-interceptor-commons-1.5.jar 51306
+<===[JENKINS REMOTING CAPACITY]===>   channel started
+Executing Maven:  -B -f /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/getCustomer/pom.xml -s /redhat/platforms/dev/maven/conf/settings.xml -gs /redhat/platforms/dev/maven/conf/settings.xml fabric8:deploy -Dfabric8.jolokiaUrl=http://localhost:8181/jolokia -Dmaven.test.skip=true
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Some problems were encountered while building the effective settings
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Unrecognised tag: 'repository' (position: START_TAG seen ...<!--\n\t     BPMS INTERNAL REPOSITORY\n\t-->\n        <repository>... @80:21)  @ /redhat/platforms/dev/maven/conf/settings.xml, line 80, column 21
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Unrecognised tag: 'repository' (position: START_TAG seen ...<!--\n\t     BPMS INTERNAL REPOSITORY\n\t-->\n        <repository>... @80:21)  @ /redhat/platforms/dev/maven/conf/settings.xml, line 80, column 21
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] 
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building getCustomer 0.0.1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> fabric8-maven-plugin:1.1.0.CR5:deploy (default-cli) > install @ getCustomer >>>
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.7:resources (default-resources) @ getCustomer ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 11 resources
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ getCustomer ---
+[INFO] No sources to compile
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.7:testResources (default-testResources) @ getCustomer ---
+[INFO] Not copying test resources
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ getCustomer ---
+[INFO] Not compiling test sources
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.15:test (default-test) @ getCustomer ---
+[INFO] Tests are skipped.
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-bundle-plugin:2.3.7:bundle (default-bundle) @ getCustomer ---
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- soapui-maven-plugin:5.2.1:test (robustness-testing) @ getCustomer ---
+[JENKINS] Recording test results
+hudson.AbortException: Test reports were found but none of them are new. Did tests run? 
+For example, /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/getCustomer/target/surefire-reports/TEST-BlueprintUnitTest.xml is 5 min 17 sec old
+
+	at hudson.tasks.junit.TestResult.parse(TestResult.java:216)
+	at hudson.maven.reporters.SurefireArchiver.postExecute(SurefireArchiver.java:148)
+	at hudson.maven.Maven3Builder$MavenExecutionListener.recordMojoEnded(Maven3Builder.java:634)
+	at hudson.maven.Maven3Builder$MavenExecutionListener.mojoSucceeded(Maven3Builder.java:615)
+	at hudson.maven.Maven3Builder$JenkinsEventSpy.onEvent(Maven3Builder.java:308)
+	at org.apache.maven.eventspy.internal.EventSpyDispatcher.onEvent(EventSpyDispatcher.java:104)
+	at org.apache.maven.eventspy.internal.EventSpyExecutionListener.mojoSucceeded(EventSpyExecutionListener.java:131)
+	at org.apache.maven.lifecycle.internal.DefaultExecutionEventCatapult.fire(DefaultExecutionEventCatapult.java:87)
+	at org.apache.maven.lifecycle.internal.DefaultExecutionEventCatapult.fire(DefaultExecutionEventCatapult.java:42)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:215)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.executeForkedExecutions(MojoExecutor.java:352)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:197)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:307)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:193)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:106)
+	at org.jvnet.hudson.maven3.launcher.Maven31Launcher.main(Maven31Launcher.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchStandard(Launcher.java:330)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:238)
+	at jenkins.maven3.agent.Maven31Main.launch(Maven31Main.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at hudson.maven.Maven3Builder.call(Maven3Builder.java:136)
+	at hudson.maven.Maven3Builder.call(Maven3Builder.java:71)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:120)
+	at hudson.remoting.UserRequest.perform(UserRequest.java:48)
+	at hudson.remoting.Request$2.run(Request.java:332)
+	at hudson.remoting.InterceptingExecutorService$1.call(InterceptingExecutorService.java:68)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- soapui-maven-plugin:5.2.1:loadtest (perf-testing) @ getCustomer ---
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ getCustomer ---
+[INFO] Installing /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/getCustomer/target/shared.jar to /redhat/platforms/dev/installs/maven/local/org/redhat/integration/getCustomer/0.0.1/getCustomer-0.0.1.jar
+[INFO] Installing /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/getCustomer/pom.xml to /redhat/platforms/dev/installs/maven/local/org/redhat/integration/getCustomer/0.0.1/getCustomer-0.0.1.pom
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-bundle-plugin:2.3.7:install (default-install) @ getCustomer ---
+[INFO] Installing org/redhat/integration/getCustomer/0.0.1/getCustomer-0.0.1.jar
+[INFO] Writing OBR metadata
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Failed to getClass for io.fabric8.maven.DeployToProfileMojo
+[INFO] 
+[INFO] <<< fabric8-maven-plugin:1.1.0.CR5:deploy (default-cli) < install @ getCustomer <<<
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- fabric8-maven-plugin:1.1.0.CR5:deploy (default-cli) @ getCustomer ---
+[INFO] Adding needed remote repository: http://repository.jboss.org/nexus/content/groups/fs-public/
+[INFO] Uploading file /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/getCustomer/pom.xml
+[INFO] Uploading: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/0.0.1/getCustomer-0.0.1.jar
+[INFO] Uploaded: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/0.0.1/getCustomer-0.0.1.jar (10 KB at 83.4 KB/sec)
+[INFO] Uploading: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/0.0.1/getCustomer-0.0.1.pom
+[INFO] Uploaded: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/0.0.1/getCustomer-0.0.1.pom (10 KB at 239.7 KB/sec)
+[INFO] Downloading: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/maven-metadata.xml
+[INFO] Downloaded: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/maven-metadata.xml (338 B at 14.4 KB/sec)
+[INFO] Uploading: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/maven-metadata.xml
+[INFO] Uploaded: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/maven-metadata.xml (389 B at 23.7 KB/sec)
+[INFO] Uploading file /redhat/platforms/dev/installs/maven/local/org/redhat/integration/getCustomer/0.0.1/getCustomer-0.0.1.jar
+[INFO] Uploading: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/0.0.1/getCustomer-0.0.1.jar
+[INFO] Uploaded: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/0.0.1/getCustomer-0.0.1.jar (12 KB at 722.8 KB/sec)
+[INFO] Uploading: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/0.0.1/getCustomer-0.0.1.pom
+[INFO] Uploaded: http://127.0.0.1:8181/maven/upload/org/redhat/integration/getCustomer/0.0.1/getCustomer-0.0.1.pom (10 KB at 259.2 KB/sec)
+[INFO] Updating profile: redhat-getCustomer with parent profile(s): [feature-camel, feature-cxf]
+[INFO] About to invoke mbean io.fabric8:type=ProjectDeployer on jolokia URL: http://localhost:8181/jolokia with user: admin
+[INFO] 
+[INFO] Profile page: /index.html#/wiki/branch/1.0/view/fabric/profiles/redhat/getCustomer.profile
+[INFO] 
+[INFO] Uploading file application.properties to invoke mbean io.fabric8:type=Fabric on jolokia URL: http://localhost:8181/jolokia with user: admin
+[INFO] Performing profile refresh on mbean: io.fabric8:type=Fabric version: 1.0 profile: redhat-getCustomer
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 10.307 s
+[INFO] Finished at: 2016-06-16T11:38:28+02:00
+[INFO] Final Memory: 41M/525M
+[INFO] ------------------------------------------------------------------------
+[JENKINS] Archiving /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/getCustomer/pom.xml to org.redhat.integration/getCustomer/0.0.1/getCustomer-0.0.1.pom
+[JENKINS] Archiving /redhat/platforms/dev/installs/maven/local/org/redhat/integration/getCustomer/0.0.1/getCustomer-0.0.1.jar to org.redhat.integration/getCustomer/0.0.1/getCustomer-0.0.1.jar
+/redhat/platforms/dev/installs/maven/local/org/redhat/integration/getCustomer/0.0.1/getCustomer-0.0.1.jar is not inside /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/getCustomer/; will archive in a separate pass
+[workspace] $ /bin/sh -xe /tmp/hudson5055886685873146018.sh
+channel stopped
++ echo 'temporary copying soapui files into jenkins workspace'
+temporary copying soapui files into jenkins workspace
++ mkdir -p /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/src/test/resources/soapui
++ cp '/redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/getCustomer_int/src/test/resources/soapui/*.xml' /redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/src/test/resources/soapui/
+cp: cannot stat ‘/redhat/platforms/ci/jenkins/jobs/getCustomer_int/workspace/getCustomer_int/src/test/resources/soapui/*.xml’: No such file or directory
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

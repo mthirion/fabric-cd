@@ -1,0 +1,11 @@
+commit 3cdfab68328f409253e3412c58120676958c06ac
+tree 77b413ba13dd1eea82e43fdd0951a5cf0fa91072
+parent 7f1504393b3e13b7c466b09c5c1b299ea4f48e92
+author Michael Thirion <mthirion@mthirion.remote.csb> 2016-06-15 11:25:08 +0200
+committer Michael Thirion <mthirion@mthirion.remote.csb> 2016-06-15 11:25:08 +0200
+
+    Fix soapui maven plugin
+
+
+
+:100644 100644 34219983c83b8ba68fe0ae5a12c84013edfa5db4 496e2a67d01d4a887bfbb9a096b87d43e1faf73c M	getCustomer/pom.xml
