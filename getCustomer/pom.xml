@@ -86,12 +86,29 @@
 		</repository>
 	</distributionManagement>
 
+	<pluginRepositories>
+		<pluginRepository>
+			<id>eviwarePluginRepository</id>
+			<url>http://www.eviware.com/repository/maven2/</url>
+		</pluginRepository>
+
+		<pluginRepository>
+			<id>smartbear-sweden-plugin-repository</id>
+			<url>http://www.soapui.org/repository/maven2/</url>
+		</pluginRepository>
+	</pluginRepositories>
 
 	<!-- DEPENDENCIES -->
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-blueprint</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.jgoodies</groupId>
+			<artifactId>forms</artifactId>
+			<version>1.0.7</version>
 		</dependency>
 
 		<dependency>
@@ -254,11 +271,11 @@
 				<version>1.1.0.CR5</version>
 			</plugin>
 
-  
+
 			<plugin>
 				<groupId>com.smartbear.soapui</groupId>
 				<artifactId>soapui-maven-plugin</artifactId>
-				<version>5.2.1</version>
+				<version>5.1.2</version>
 				<executions>
 					<execution>
 						<id>robustness-testing</id>
@@ -276,7 +293,7 @@
 							<projectProperties />
 						</configuration>
 					</execution>
-				<execution>
+					<execution>
 						<id>perf-testing</id>
 						<phase>verify</phase>
 						<goals>
