@@ -9,14 +9,13 @@
 	License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
 	OF ANY KIND, either express or implied. See the License for the specific 
 	language governing permissions and limitations under the License. -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<!-- METADATA -->
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.redhat.integration</groupId>
 	<artifactId>getCustomer</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<description>an ESB pipe example</description>
 	<packaging>bundle</packaging>
 
@@ -46,7 +45,8 @@
 	<!-- SCM FOR THE RELEASE PLUGIN -->
 	<scm>
 		<developerConnection>scm:git:https://github.com/mthirion/fabric-cd.git</developerConnection>
-	</scm>
+	  <tag>getCustomer-0.0.2</tag>
+  </scm>
 
 	<!-- DEPENDENCY MANAGEMENT -->
 	<dependencyManagement>
