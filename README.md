@@ -44,6 +44,9 @@ The application code has been simplified for the purpose of the example.  Error 
 
 The application is contained in the getCustomer subdirectory.
 The 'cd' directory contains diagrams describing the principle of the CD process (cd-hl), the details of the cd process (cd-details), the simple description of the application (use-case-example) and the high level description of the Fuse/Fabric standard CI/CD architecture reference (fabric-cd).
+The repository also contains an io.fabric8.agent.properties, which itself reflects the configuration for the Fabric to point to the external Nexus respository as its source of artifacts and internet proxy.
+The example shows the usage of the Nexus "release" repository while the use of the snapshot (to be uncommended if in de) is commented out.
+This content of the file can be edited in the Fabric web console under "Wiki>default>io.fabric8.agent.properties".
 
 The Jenkins jobs are stored in the 'jobs' subdirectory.  They are compatible with Jenkins v2.  
 The Jenkins "build pipeline plugin" can be used to visualize the relationship between the jobs easierly.  The root job is getCustomer_CI.
@@ -60,7 +63,8 @@ The unit test is the BlueprintUnitTest.java class triggered by the maven surefir
 When the code is ready for system tests (which can be a few CI steps away), the getCustomer_dev job is triggered.
 The first purpose of this job is to move the code to the "dev" branch, which only contains "deployable" snapshot versions to be tested.
 This job then builds and deploys the snapshot version to Nexus (in the Nexus "snapshot" repository), then deploy a profile to Fabric using the fabric8 maven plugin.
-The profile doesn't contain any version in its name so the publication of a new maven artifact under that profile triggers a new deployment by the Fabric deployment agent.
+The profile is named "redhat-getCustomer".
+It doesn't contain any version in its name so the publication of a new maven artifact under that profile triggers a new deployment by the Fabric deployment agent.
 
 The maven "deploy" goal uses the "altSnapshotDeploymentRepository" option so that we don't fully rely on information contained in the pom.xml
 The last step of the job is to launch the getCustomer_devtest job, which performs system tests.
