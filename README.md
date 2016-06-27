@@ -127,5 +127,7 @@ The tests are preconfigured with some assertions (average & max response time + 
 ## Conclusion
 If the entire pipeline succeeds, the new source code has become a candidate to a future deployment.
 Indeed the snapshot version has been turned into a release and its robustness (integration and performance test) have been verified.
+Though the entire delivery chain is automated, there are still some places where manual steps/approvals/checks are done.  
+The automated delivery chain forms the Continuous Delivery model.  A "Devops" organization/way of working could fill this last gap and remove the need for the manual interventions.
 
 
